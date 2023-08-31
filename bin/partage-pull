@@ -1,0 +1,4 @@
+#!/bin/bash
+
+rsync --iconv=utf8 --exclude=".*" -azv ~/Shared/partage/uv-larm/* partage
+

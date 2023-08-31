@@ -1,0 +1,7 @@
+#!/bin/bash
+# mount imt partage WebDAV
+# $IMT_PARTAGE should looklike "https://partage.imt.fr/remote.php/dav/files/guillaume.lozenguez@mines-douai.fr"
+# for autocredential, edit `/etc/davfs2/secrets` file
+# you also can grant you with mount autorization by adding a file `14-mount` in `/etc/sudoers.d/` including the line:
+# `user        ALL=(ALL:ALL) NOPASSWD: /usr/sbin/mount.davfs`
+sudo mount.davfs -o noexec,uid=$USER $IMT_PARTAGE/Shared/mobisyst/uv-larm ./shared-partage

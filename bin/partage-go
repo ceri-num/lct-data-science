@@ -1,0 +1,3 @@
+#!/bin/bash
+
+firefox -url "https://partage.imt.fr/index.php/apps/files/?dir=/uv-larm"
