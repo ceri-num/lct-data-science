@@ -5,8 +5,8 @@ paginate: true
 backgroundImage: url('../style/bg-imt.svg')
 ---
 
-# IMT MobiSyst
-### an IMT Nord Europe Platform <br /> on Mobile Autonomous System
+# Programming (Python) <br /> for Data-Science
+### Object Oriented Programming
 
 <br />
 <br />
@@ -30,10 +30,4 @@ backgroundImage: url('../style/bg-imt.svg')
 ---
 <!-- --------------------------------------------------------------- -->
 
-
-## Some figures
-
-![](../resources/dessin.svg)
-
----
-<!-- --------------------------------------------------------------- -->
+## Point 1

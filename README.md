@@ -37,6 +37,7 @@ The presentation/slides are prepared using `marp` (an extantion to Markdown perm
 
 - Get *Marp for VS Code* extention
 - On `VS Code parameters > working space > Marp for VS Code` you can add elements on `Markdown › Marp: Themes` : `style/imt-slide.css`.
+- Also authorise html tag. activate `marp: Enable HTML` in settings.
 
 
 ### Overleaf Web-Editor

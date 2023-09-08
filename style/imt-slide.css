@@ -16,7 +16,7 @@ h1 { /* presentation title */
 }
 
 h2 { /* frame title */
-    width: 310mm;
+    /* width: 800pt; */
     margin: 0px 0px 40px 0px;
     padding: 20px 20px;
     font-size: 28pt;
@@ -64,4 +64,27 @@ em{
 img {
     margin: 10px auto 20px;
     display: block;
+}
+
+.line{
+    width: 1124px;
+    /*width: 840pt; */
+    margin: 0pt;
+}
+
+.line>div{
+    display: inline-block;
+    vertical-align:middle;
+}
+
+.line>div:not(:first-child) {
+    margin-left: 16px;
+}
+
+.one2 {
+    width: 550px;
+}
+
+.one3 {
+    width: 358px;
 }
