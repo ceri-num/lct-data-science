@@ -49,14 +49,13 @@ Vocabulary: Prompt, Command
 
 ![](./bash_screenshot.png)
 
-
 </div>
 </div>
 
 ---
-<!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -- >
 
-## The Shell in the TimesLines
+## History of The Shell
 
 
 ---
@@ -98,9 +97,9 @@ Vocabulary: Prompt, Command
 
 - _/_: the root directory in Linux system <br /> example: `du /bin/bash` (du - estimate file space usage)
 - _._: the current directory - example: `mkdir ./workspace`
-- _.._: the parent directory - example: `cd ../../Documents`
+- _.._: the parent directory - example: `cd ../../media`
 - _~_: the user directory - example: `cd ~/Documents`
-- **CAptIon maTer** - example: `cd ~/Documents` $\neq$ `cd ~/documents`
+- **CApitAl Letters maTer** - example: `cd ~/Documents` $\neq$ `cd ~/documents`
 
 
 
@@ -116,14 +115,14 @@ Example: `ls -a ~`
 ### Commands for Mastering Commands:
 
 - _man_: command and library manuel - example: `man cp`
-- _apropos_: command manuel - example: `man copy`
+- _apropos_: command manuel - example: `apropos copy`
 - _whereis_: find the location of a resource - example: `whereis python3`
 - _alias_: create our own command - example: `alias listall="ls -a"`
 
 ---
 <!-- --------------------------------------------------------------- -->
 
-## Basics: The Session
+## Basics: a Session
 
 **An active connection to a system or program.**
 
@@ -137,7 +136,7 @@ Example: `ls -a ~`
 - _env_: list the environement variable.
 - _$_: access a variable - example: `echo $PATH`
 - _export_: create a new variable - example: `export PATH=$PATH:~/bin`
-- _~/.bashrc_ file: user configuration routine.
+- _~/.bashrc_ (file): user configuration commands.
 
 ---
 <!-- --------------------------------------------------------------- -->
@@ -186,12 +185,11 @@ Example with `ls -l /etc`
 `ps` - List the local processes (ie. children of the bash shell)
 `ps -e` - list all processes
 - _top_: interactive Porcess monitoring ( _Q_ to quit )
-- _kill_: sent a signal to process 
+- _kill_: sent a signal to a process 
 `kill 19482` - send TERM signal to process _19482_
 `kill -s KILL 19482` - send KILL signal to process _19482_
 
-For managing processes, OS attaches some elements to each one,
-And mainly the _PID_: Process IDentifier
+For managing processes, OS attaches some elements to each one:<br />the _PID_ (Process IDentifier), a parents, ...
 
 
 ---
@@ -245,7 +243,7 @@ shell: `python3 hello.py`
 
 ## Python Programming Langauges
 
-### sequential instructions
+### Sequential Instructions
 
 ```python
 
@@ -318,6 +316,7 @@ print( "Result: " + str(b) )
 def myWonderfullFunction( aFirstIntergerPaprameter, aSecondIntergerParameters )
     intergerSum= aFirstIntergerPaprameter + aSecondIntergerParameters
     return intergerSum
+
 ```
 
 **script:** `myOwnCommand.py`
@@ -326,6 +325,10 @@ def myWonderfullFunction( aFirstIntergerPaprameter, aSecondIntergerParameters )
 import myOwnPkg
 
 ...
+
+b= myOwnPkg.myWonderfullFunction( a, 40 )
+...
+
 ```
 
 ---
@@ -352,15 +355,26 @@ print( sys.path )
 
 ## Python Interpreter (cpython)
 
+<br />
+<br />
+
 - Code source: [github.com](https://github.com/python/cpython) - 63.5% Python / 34.6% C 
 - _Compile_ them _Interpret_ the program 
 - Memory Managment: _Dynamic Type_, _Garbage Collector_
 - Object-Oriented Programming (OOP)
 
+<br />
+<br />
+<br />
+<br />
+
+
 ---
 <!-- --------------------------------------------------------------- -->
 
 ## Python Specifity
+
+<br />
 
 - **Rich language capabilities** (it is possible to do complexe things)
 - **Concise language** (complexe things requires few codes)
@@ -370,7 +384,9 @@ print( sys.path )
 - **Use a virtual machine** (including Garbage Collector)
 - **Not efficient** (but easy interface to C and C++)
 
-As a results: a large usage: _system administration_, _web_, _data science_, ect.
+<br />
+
+As a results: a diversified use: _system administration_, _web_, _data science_, ect.
 
 
 ---
@@ -388,7 +404,7 @@ As a results: a large usage: _system administration_, _web_, _data science_, ect
 ---
 <!-- --------------------------------------------------------------- -->
 
-## Exercice: Search for User Groups
+## Exercice: Search for a User's Groups
 
 #### Create a command that take a user name in parameter <br /> and return (print) all its groups.
 
@@ -407,7 +423,7 @@ Process in a incremental way:
 ---
 <!-- --------------------------------------------------------------- -->
 
-## Exercice: Search for User Groups
+## Exercice: Search for a User's Groups
 
 <br />
 <br />
@@ -427,7 +443,7 @@ Search on : `python open` $\rightarrow$ [W3School](https://www.w3schools.com/pyt
 ---
 <!-- --------------------------------------------------------------- -->
 
-## Exercice: Search for User Groups
+## Exercice: Search for a User's Groups
 
 <br />
 <br />
@@ -447,7 +463,7 @@ Search on : `python open` $\rightarrow$ [W3School](https://www.w3schools.com/pyt
 ---
 <!-- --------------------------------------------------------------- -->
 
-## Exercice: Search for User Groups
+## Exercice: Search for a User's Groups
 
 <br />
 <br />
@@ -466,14 +482,14 @@ Search on : `python open` $\rightarrow$ [W3School](https://www.w3schools.com/pyt
 ---
 <!-- --------------------------------------------------------------- -->
 
-## Exercice: Search for User Groups
+## Exercice: Search for a User's Groups
 
 <br />
 <br />
 <br />
 <br />
 
-#### Make-it as a beautifull shell command <br />(executable, easy to find, user name as a parameter)
+#### Make-it as a beautifull shell command <br />(executable, user name as a parameter, easy to find)
 
 
 <br />
@@ -484,14 +500,14 @@ Search on : `python open` $\rightarrow$ [W3School](https://www.w3schools.com/pyt
 ---
 <!-- --------------------------------------------------------------- -->
 
-## Exercice: Search for User Groups
+## Exercice: Search for a User's Groups
 
 <br />
 <br />
 <br />
 <br />
 
-#### Handle bugs (not a user name, no groups, no system file, etc..)
+#### Handle bugs (not a user name, no groups, no system file, -h option, etc..)
 
 <br />
 <br />
