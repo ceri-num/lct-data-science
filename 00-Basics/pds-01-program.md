@@ -31,7 +31,7 @@ backgroundImage: url('../style/bg-imt.svg')
 ---
 <!-- --------------------------------------------------------------- -->
 
-## The Revolution of Modern Computing
+## The Revolution of Modern Computing (1970s)
 
 <div class="line">
 <div class="one2">
@@ -166,12 +166,19 @@ Example with `ls -l /etc`
 
 ## Basics: User, Group and Rules
 
+<br />
+
 ### Again Some Commands...
 
 - _chmod_: change authorizations - Examples:
 `chmod +x aFile` - add _x_ authorization on _aFile_
 `chmod 752 aFile` - set authorisation on _aFile_ on a binary style
 - _chown_: change the owner 
+
+
+<br />
+<br />
+<br />
 
 ---
 <!-- --------------------------------------------------------------- -->
@@ -348,7 +355,6 @@ pip install tqdm pytest
 import sys
 print( sys.path )
 ```
-- _Question ?_ $\quad$ Where is `tqdm` ?
 
 ---
 <!-- --------------------------------------------------------------- -->
@@ -425,6 +431,23 @@ Process in a incremental way:
 
 ## Exercice: Search for a User's Groups
 
+
+#### Setup a workspace
+
+**Typically:**
+
+- Make a new directory : `python-data-science` for instance.
+- Edit a new python file : `search-group.py` with *gedit* for instance.
+- Test an *hello-world* demo
+(cf. slide 14, but with `search-group.py` rather than `hello.py`)
+
+
+
+---
+<!-- --------------------------------------------------------------- -->
+
+## Exercice: Search for a User's Groups
+
 <br />
 <br />
 
@@ -435,7 +458,7 @@ Process in a incremental way:
 <br />
 <br />
 
-Search on : `python open` $\rightarrow$ [W3School](https://www.w3schools.com/python/ref_func_open.asp)
+A web research on : `python open` will point for instance:  [W3School](https://www.w3schools.com/python/ref_func_open.asp) link
 
 <br />
 <br />
@@ -447,18 +470,18 @@ Search on : `python open` $\rightarrow$ [W3School](https://www.w3schools.com/pyt
 
 <br />
 <br />
-<br />
-<br />
 
-#### Search for a specific word in a line
-
+#### Search for a specific word (user name) in a line.
 
 <br />
 <br />
 <br />
-<br />
-<br />
 
+There is a lot of string method in Python (for instance still in [W3School](https://www.w3schools.com/python/python_strings_methods.asp))
+and one of them seems very interesting: `find()`
+
+<br />
+<br />
 
 ---
 <!-- --------------------------------------------------------------- -->
@@ -467,6 +490,23 @@ Search on : `python open` $\rightarrow$ [W3School](https://www.w3schools.com/pyt
 
 <br />
 <br />
+
+#### Extract for a specific word (group name) in a line.
+
+<br />
+<br />
+<br />
+
+Here the `split()` function used on `:` separator would work perfectly.
+
+<br />
+<br />
+
+---
+<!-- --------------------------------------------------------------- -->
+
+## Exercice: Search for a User's Groups
+
 <br />
 <br />
 
@@ -474,7 +514,10 @@ Search on : `python open` $\rightarrow$ [W3School](https://www.w3schools.com/pyt
 
 <br />
 <br />
-<br />
+
+- Python List still in [W3Schools](https://www.w3schools.com/python/python_lists.asp)
+- To notice: main group is in `passwd` file the other group in `group` file.
+
 <br />
 <br />
 
@@ -485,16 +528,16 @@ Search on : `python open` $\rightarrow$ [W3School](https://www.w3schools.com/pyt
 ## Exercice: Search for a User's Groups
 
 <br />
-<br />
-<br />
-<br />
 
-#### Make-it as a beautifull shell command <br />(executable, user name as a parameter, easy to find)
-
+#### Make-it as a beautiful shell command <br />(executable and easy to find, user name to seek as a parameter)
 
 <br />
-<br />
-<br />
+
+**For instance:**
+
+- by using an `alias` defined in `.bashrc` file.
+- `sys.argv` from the python package `sys` to import provide the list of the command line arguments.
+
 <br />
 
 ---
@@ -504,13 +547,12 @@ Search on : `python open` $\rightarrow$ [W3School](https://www.w3schools.com/pyt
 
 <br />
 <br />
-<br />
-<br />
 
-#### Handle bugs (not a user name, no groups, no system file, -h option, etc..)
+**Going futher:**
 
-<br />
-<br />
-<br />
+- `split()` is restrictive to much for extracting some element from a string ? take a look at Regualar Expression in Python [w3school](https://www.w3schools.com/python/python_regex.asp)
+- Handle bugs (not a user name, no groups, ...
+- add option to your command: *--help* or *-h* for help, **-i** for printing group ids, ...
+
 <br />
 <br />
