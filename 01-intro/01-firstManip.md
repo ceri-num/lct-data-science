@@ -375,7 +375,12 @@ in a $100 \times 100$ rectangle
 with the `random()` function from the `random` Package for instance.
 (on [w3schools](https://www.w3schools.com/python/module_random.asp))
 
-- **Plot the piont-cloud as:**
+- **Plot the piont-cloud as**
+
+```python
+plt.plot( listX, listY, color='green',
+            marker='o', linestyle=' ')
+```
 
 </div>
 <div class="one2">
@@ -407,7 +412,7 @@ Based on the 2 more distant points.
 </div>
 <div class="one2">
 
-![](./cloud-simple.png)
+![](./cloud-regressor1.png)
 
 </div>
 </div>
@@ -433,10 +438,46 @@ $$ y_i= ax+b+ random[0,\ e_{max}] $$
 </div>
 <div class="one2">
 
-![](./cloud-simple.png)
+![](./cloud-linear.png)
 
 </div>
 </div>
+
+---
+<!-- --------------------------------------------------------------- -->
+
+## Linear Regression
+
+
+#### Optimize the linear parameters
+
+
+<div class="line">
+<div class="one2">
+
+- **Optimize $a$**
+
+Search a better $a$ at given step $s$
+
+Try the model with $a+s$ and $a-s$
+
+Keep the one with a min. average error.
+
+Then repeat.
+
+- **Optimize $b$**
+
+When $a$ is fixed, use the process on $b$.
+
+</div>
+<div class="one2">
+
+![](./cloud-regressor2.png)
+
+
+</div>
+</div>
+
 
 ---
 <!-- --------------------------------------------------------------- -->
@@ -463,7 +504,7 @@ $\epsilon$ is the desired maximal error on the model estimation.
 </div>
 <div class="one2">
 
-![](./cloud-simple.png)
+![](./cloud-regressor3.png)
 
 </div>
 </div>
@@ -503,11 +544,11 @@ Several implementation mainly based on the [Linear Least Squares](https://en.wik
 
 - This time the generation is based on 2 centers.
 
-Compute the {x_i, y_i} from its associate center
+Compute the $\{x_i, y_i\}$ from its associate center
 at a random distance $d$
-in a random direction $d$.
+in a random direction $\alpha$.
 
-But the closest to the center the more probable. 
+_But_ the closest to the center the more probable. 
 
 for that we want to use a [normal distribution](https://en.wikipedia.org/wiki/Normal_distribution)
 
