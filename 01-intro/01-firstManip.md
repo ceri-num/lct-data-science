@@ -39,7 +39,7 @@ backgroundImage: url('../style/bg-imt.svg')
 
 <br />
 
-- Higlight Statistics
+- Highlight Statistics
 - Find Causality
 - Predict
 
@@ -49,7 +49,7 @@ backgroundImage: url('../style/bg-imt.svg')
 ## Regression
 
 
-"regression analysis is a set of statistical processes for estimating the relationships between a dependent variable ($Y_i$) and one or more independent variables ($X_i$)." (**[Wikipedia Sept. 2023](https://en.wikipedia.org/wiki/Regression_analysis)**)
+"Regression analysis is a set of statistical processes for estimating the relationships between a dependent variable ($Y_i$) and one or more independent variables ($X_i$)." (**[Wikipedia Sept. 2023](https://en.wikipedia.org/wiki/Regression_analysis)**)
 
 $$ \text{predict } Y_i \text{ from } X_i \quad or: \quad  Y_i = \mathit{regression}( X_i ) $$
 
@@ -64,7 +64,7 @@ $$ Y_i = f( X_i, \beta ) + e_i \quad \text{with:} $$
 <div class="one2">
 
 - $\beta$: the model parameters
-(or unknow variables)
+(or unknown variables)
 - $e_i$: an error
 
 </div>
@@ -81,7 +81,7 @@ $$ Y_i = f( X_i, \beta ) + e_i \quad \text{with:} $$
 <div class="one2">
 
 **Data set:**
-$$\{ y_i, x_{i1},, x_{i2}, \ldots, x_{ip} \} i \in [1, n]$$
+$$\{ y_i, x_{i1},, x_{i2}, \ldots, x_{ip} \}, \quad i \in [1, n]$$
 
 <br />
 
@@ -90,7 +90,7 @@ $$y_i=  \beta_0 + \beta_1 x_{i1} + \ldots + \beta_p x_{ip} + e_i$$
 
 <br />
 
-**In 2 Dimention:**
+**In 2 Dimention ($p=1$):**
 $$y_i= a x_{i} + b + e_i$$
 
 </div>
@@ -109,7 +109,7 @@ $$y_i= a x_{i} + b + e_i$$
 
 ## Classification
 
-The capacity to tag an observation with it appropriate descriptor.
+The capacity to tag an observation with it appropriate descriptors.
  
 For instance _Mister or Miss?_: 
 
@@ -137,7 +137,7 @@ $$ \text{predict } Y_i \text{ from } X_i \quad or: \quad  Y_i = \mathit{classifi
 
 <br />
 
-*But*: with $Y_i$ defined in a **Finit Countable Set** 
+*But:* $Y_i$ defined in a **Finit Countable Set** 
 
 $$Y_i \in [Value_1, Value_2, \ldots, Value_N]$$
 
@@ -153,8 +153,8 @@ $$Y_i \in [Value_1, Value_2, \ldots, Value_N]$$
 <div class="line">
 <div class="one2" >
 
-**In other term:**
-Space partitionning or clustering
+**In other terms:**
+Space Partitioning or Clustering
 
 <br />
 <br />
@@ -253,7 +253,7 @@ Configurable type:
 myTab= np.array([127, 128, 129], dtype=np.int8)
 ```
 
-Numerus of usefull function ([average](https://numpy.org/doc/stable/reference/generated/numpy.average.html) for instance):
+Numerous of useful function ([average](https://numpy.org/doc/stable/reference/generated/numpy.average.html) for instance):
 
 ```python
 avg = np.average(a)
@@ -261,13 +261,13 @@ avg = np.average(a)
 
 ---
 
-## Numpy: Not the only one Science toolkit
+## Numpy: Not the only Science toolkit
 
 <br />
 <br />
 
 - [SciPy](https://scipy.org) algorithms for optimization, integration, interpolation, ...
-- [Pandas](https://pandas.pydata.org/) a data annalysis lib.
+- [Pandas](https://pandas.pydata.org/) a data analysis lib.
 - [Scikit-learn](https://scikit-learn.org) for machine learning
 - [PyTorch](https://pytorch.org) dedicated to  deep learning algorithms.
 - [opencv-python](opencv.org) focusing on image processing
@@ -355,13 +355,9 @@ A huge gallery on : [https://matplotlib.org](https://matplotlib.org/stable/galle
 - **Linear Regression**
     - Generate 2D points
     - Compute the linear parameters
-- **Suppervised Classification**
-    - Generate 2D k-colored points
-    - Compute the k centers
-- **Unsuppervised Classification**
-    - Generate 2D points
-    - Compute the k centers
-    - Search for an appropriate k
+- **Classification**
+    - Generate 2 point-clouds
+    - Compute a Linear Classifier
 
 ---
 <!-- --------------------------------------------------------------- -->
@@ -370,13 +366,51 @@ A huge gallery on : [https://matplotlib.org](https://matplotlib.org/stable/galle
 
 #### Generate a 2D point-cloud
 
+<div class="line">
+<div class="one2">
+
+- **Generate random points**
+in a $100 \times 100$ rectangle
+
+with the `random()` function from the `random` Package for instance.
+(on [w3schools](https://www.w3schools.com/python/module_random.asp))
+
+- **Plot the piont-cloud as:**
+
+</div>
+<div class="one2">
+
+![](./cloud-simple.png)
+
+</div>
+</div>
+
 
 ---
 <!-- --------------------------------------------------------------- -->
 
 ## Linear Regression
 
-#### Compute the linear parameters
+#### Estimate the linear parameters
+
+<div class="line">
+<div class="one2">
+
+- **Try a first estimation**
+
+Compute $a$ and $b$ as $y=ax+b$
+Based on the 2 more distant points.
+
+- **Plot the line** from $-10$ to $110$
+- **Compute the average error**
+
+</div>
+<div class="one2">
+
+![](./cloud-simple.png)
+
+</div>
+</div>
 
 ---
 <!-- --------------------------------------------------------------- -->
@@ -385,37 +419,118 @@ A huge gallery on : [https://matplotlib.org](https://matplotlib.org/stable/galle
 
 #### Generate again a 2D point-cloud
 
----
-<!-- --------------------------------------------------------------- -->
+<div class="line">
+<div class="one2">
 
-## Suppervised Classification
+- **Generate random points**
+According to a linear model:
 
-#### Generate 2D k-colored points
+Given $a$, $b$ and $e_{max}$
 
----
-<!-- --------------------------------------------------------------- -->
+$$ x_i= random[0,\ 100] $$
+$$ y_i= ax+b+ random[0,\ e_{max}] $$
 
-## Suppervised Classification
+</div>
+<div class="one2">
 
-#### Compute the k centers
+![](./cloud-simple.png)
 
----
-<!-- --------------------------------------------------------------- -->
-
-## Unsuppervised Classification
-
-#### Generate 2D points
+</div>
+</div>
 
 ---
 <!-- --------------------------------------------------------------- -->
 
-## Unsuppervised Classification
+## Linear Regression
 
-#### Compute the k centers
+
+#### Optimize the linear parameters
+
+
+<div class="line">
+<div class="one2">
+
+- **Repeat**
+
+Previous algorithm provides a solution at $\text{s}$ estimation error.
+
+You can repeat it with $s=s/2$ 
+
+and again until $s < \epsilon$
+
+$\epsilon$ is the desired maximal error on the model estimation.
+
+</div>
+<div class="one2">
+
+![](./cloud-simple.png)
+
+</div>
+</div>
+
 
 ---
 <!-- --------------------------------------------------------------- -->
 
-## Unsuppervised Classification
+## Linear Regression
 
-#### Search for an appropriate k
+<br/>
+<br/>
+
+#### Generate again the linear parameters
+
+<br/>
+
+Several implementation mainly based on the [Linear Least Squares](https://en.wikipedia.org/wiki/Linear_least_squares) exists.
+
+- Find a function in a scientific package
+- Compare the result with your solution 
+
+
+<br/>
+<br/>
+<br/>
+
+---
+<!-- --------------------------------------------------------------- -->
+
+## Classification
+
+
+#### Generate 2 point-clouds
+
+<br />
+
+- This time the generation is based on 2 centers.
+
+Compute the {x_i, y_i} from its associate center
+at a random distance $d$
+in a random direction $d$.
+
+But the closest to the center the more probable. 
+
+for that we want to use a [normal distribution](https://en.wikipedia.org/wiki/Normal_distribution)
+
+- Plot them in 2 colors
+
+
+---
+<!-- --------------------------------------------------------------- -->
+
+## Classification
+
+<br />
+<br />
+
+
+#### Compute a Linear Classifier
+
+<br />
+
+- Search for the best separation line 
+
+Perpendicular to the linear regression 
+build over the 2 point-clouds.
+
+<br />
+<br />
