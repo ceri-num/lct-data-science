@@ -407,8 +407,41 @@ plt.plot( listX, listY, color='green',
 Compute $a$ and $b$ as $y=ax+b$
 Based on the 2 more distant points.
 
+**Brute-force algorythm:** 
+```python
+forall combinaison pi, pj in data
+    p1, p2 = max( dist(p1, p2), dist(pi, pj) )
+```
+
 - **Plot the line** from $-10$ to $110$
 - **Compute the average error**
+
+</div>
+<div class="one2">
+
+![](./cloud-regressor1.png)
+
+</div>
+</div>
+
+
+---
+<!-- --------------------------------------------------------------- -->
+
+## Linear Regression
+
+#### Estimate the linear parameters
+
+<div class="line">
+<div class="one2">
+
+- **Compute the average error**
+
+The error between
+the observed $y_i$
+and it estimation $\widehat{y}_i$ 
+
+$$\widehat{y}_i = ax_i+b$$
 
 </div>
 <div class="one2">
@@ -452,7 +485,6 @@ $$ y_i= ax_i+b+ random[0,\ e_{max}] $$
 
 #### Optimize the linear parameters
 
-
 <div class="line">
 <div class="one2">
 
@@ -460,11 +492,12 @@ $$ y_i= ax_i+b+ random[0,\ e_{max}] $$
 
 Search a better $a$ at given distance $d$
 
-Try the model with $a+d$ and $a-d$
+Compute the average error
+with $a+d$ and $a-d$
 
-Keep the one with a min. average error.
+and keep the minimal solution.
 
-Then repeat.
+Then repeat as necessary
 
 - **Optimize $b$**
 
@@ -492,15 +525,16 @@ When $a$ is fixed, use the process on $b$.
 <div class="line">
 <div class="one2">
 
-- **Repeat**
-
-Previous algorithm provides a solution at $\text{s}$ estimation error.
+- **Repeat Again**
 
 You can repeat it with $d=d/2$ 
-
 and again until $d < \epsilon$
 
-$\epsilon$ is the desired maximal error on the model parrameters (e.g. $\epsilon=0.0001$)
+$\epsilon$ is the maximal autorized error
+on the model parrameters
+(e.g. $\epsilon=0.0001$)
+
+$a$ and $b$ are $\epsilon$-optimal
 
 </div>
 <div class="one2">
