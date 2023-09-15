@@ -296,10 +296,11 @@ avg = np.average(a)
 
 ```Python
 # Import pyplot package:
+import numpy
 import matplotlib.pyplot as plt
 
 # Create a plot from a data set:
-data= [1, 2, 3, 4]
+data= numpy.array( [1, 2, 3, 4] )
 plt.plot( data )
 
 # Manage graphical design:
@@ -433,7 +434,7 @@ According to a linear model:
 Given $a$, $b$ and $e_{max}$
 
 $$ x_i= random[0,\ 100] $$
-$$ y_i= ax+b+ random[0,\ e_{max}] $$
+$$ y_i= ax_i+b+ random[0,\ e_{max}] $$
 
 </div>
 <div class="one2">
@@ -457,9 +458,9 @@ $$ y_i= ax+b+ random[0,\ e_{max}] $$
 
 - **Optimize $a$**
 
-Search a better $a$ at given step $s$
+Search a better $a$ at given distance $d$
 
-Try the model with $a+s$ and $a-s$
+Try the model with $a+d$ and $a-d$
 
 Keep the one with a min. average error.
 
@@ -495,11 +496,11 @@ When $a$ is fixed, use the process on $b$.
 
 Previous algorithm provides a solution at $\text{s}$ estimation error.
 
-You can repeat it with $s=s/2$ 
+You can repeat it with $d=d/2$ 
 
-and again until $s < \epsilon$
+and again until $d < \epsilon$
 
-$\epsilon$ is the desired maximal error on the model estimation.
+$\epsilon$ is the desired maximal error on the model parrameters (e.g. $\epsilon=0.0001$)
 
 </div>
 <div class="one2">
