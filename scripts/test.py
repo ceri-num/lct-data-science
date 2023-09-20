@@ -1,13 +1,14 @@
-# Import pyplot package:
-import numpy
-import matplotlib.pyplot as plt
+# Definition:
+class MyObjectType :
+    def method(self) :
+        return 42
+    
+# Use:
+anInstance= MyObjectType() # Instanciate a MyObjectType
 
-# Create a plot from a data set:
-data= numpy.array( [1, 2, 3, 4] )
-plt.plot( data )
+v1= MyObjectType.method(anInstance)
+v2= anInstance.method()
 
-# Manage graphical design:
-plt.ylabel('some numbers')
-
-# Generate the plot:
-plt.show()
+if v1 == v2 :
+    print( "Hello World" )
+print( f"{MyObjectType.method} \nvs {anInstance.method}")
