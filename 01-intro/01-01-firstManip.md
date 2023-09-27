@@ -24,7 +24,7 @@ backgroundImage: url('../style/bg-imt.svg')
 
 <br />
 
-- **Main problems: Regression and Classification**
+- **A First Problem: Regression**
 - **Manipulate a Data-Set in Python**
 - **Let's play**
 
@@ -46,8 +46,7 @@ backgroundImage: url('../style/bg-imt.svg')
 ---
 <!-- --------------------------------------------------------------- -->
 
-## Regression
-
+## A First Problem - Regression
 
 "Regression analysis is a set of statistical processes for estimating the relationships between a dependent variable ($Y_i$) and one or more independent variables ($X_i$)." (**[Wikipedia Sept. 2023](https://en.wikipedia.org/wiki/Regression_analysis)**)
 
@@ -76,7 +75,7 @@ $$ Y_i = f( X_i, \beta ) + e_i \quad \text{with:} $$
 ---
 <!-- --------------------------------------------------------------- -->
 
-## Linear Regression
+## A First Problem - Linear Regression
 <div class="line">
 <div class="one2">
 
