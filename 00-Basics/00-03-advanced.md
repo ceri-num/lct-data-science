@@ -664,12 +664,12 @@ $$ y= py\left( \mathit{plate}(x) \right) + \mathit{error}$$
 * $py(p)$ the `y` coordinate of a plate `p`.
 * $\mathit{plate}(x)$ the plate at the coordinate `x`.
 
-In other terms, all `x` of a given plate share the same `y`.
 
 <div class="line">
 <div class="one2">
 
-**Example:**
+In other terms, all `x` of a given plate
+share the same `y`. - **Example:**
 
 </div>
 <div class="one2">
