@@ -106,111 +106,11 @@ $$y_i= a x_{i} + b + e_i$$
 ---
 <!-- --------------------------------------------------------------- -->
 
-## Classification
-
-The capacity to tag an observation with it appropriate descriptors.
- 
-For instance _Mister or Miss?_: 
-
-name | height | waist circ. | chest circ. | Foot size | ... | Genre
------|--------|-------------|-------------|---|--|--
-Bob      | 1m80   |    89 |   81 | 44 | ... | M.
-Adriana  | 1m85   |    61 |   87 | 36 | ... | Mrs.
-Neymar   | 1m75   |    81 | 96.5 | 43 | ... | M.
-..       |     |      |  |  | ... |  
-..       |     |      |  |  | ... |  
-Camille  | 1m74   |    64 |   66 | 42 | ... | ???
-
----
-<!-- --------------------------------------------------------------- -->
-
-## Classification
-
-<br >
-<br >
-<br >
-
-**More formally:**
-
-$$ \text{predict } Y_i \text{ from } X_i \quad or: \quad  Y_i = \mathit{classifier}( X_i ) $$
-
-<br />
-
-*But:* $Y_i$ defined in a **Finit Countable Set** 
-
-$$Y_i \in [Value_1, Value_2, \ldots, Value_N]$$
-
-<br >
-<br >
-<br >
-
-
----
-
-## Classification
-
-<div class="line">
-<div class="one2" >
-
-**In other terms:**
-Space Partitioning or Clustering
-
-<br />
-<br />
-
-Example of 2D variables into 17 classes: 
-
-</div>
-<div class="one2" >
-
-![](./classif2d.png)
-
-</div>
-</div>
-
----
-<!-- --------------------------------------------------------------- -->
-
-## Classification
-
-<div class="line">
-<div class="one2">
-
-**Linear classifier**
-
-Is the data on the *left* or *right* 
-from a given linear separation ?
-
-> Support Vector Machines
-
-</div>
-</div>
-
-<div class="line">
-<div class="one2">
-
-</div>
-<div class="one2">
-
-**Means Clustering**
-
-What is *the closest* mean 
-from a given set of means.
-
-> K-Means
-
-</div>
-</div>
-
-
----
-<!-- --------------------------------------------------------------- -->
-
 ![bg](../style/bg-toc3.svg)
 
 <br />
 
-- Main problems: Regression and Classification
+- A First Problem: Regression
 - **Manipulate a Data-Set in Python**
 - Let's play
 
@@ -343,7 +243,7 @@ A huge gallery on : [https://matplotlib.org](https://matplotlib.org/stable/galle
 
 <br />
 
-- Main problems: Regression and Classification
+- A First Problem: Regression
 - Manipulate a Data-Set in Python
 - **Let's play**
 
@@ -355,9 +255,6 @@ A huge gallery on : [https://matplotlib.org](https://matplotlib.org/stable/galle
 - **Linear Regression**
     - Generate 2D points
     - Compute the linear parameters
-- **Classification**
-    - Generate 2 point-clouds
-    - Compute a Linear Classifier
 
 ---
 <!-- --------------------------------------------------------------- -->
@@ -566,46 +463,3 @@ Several implementation mainly based on the [Linear Least Squares](https://en.wik
 <br/>
 <br/>
 
----
-<!-- --------------------------------------------------------------- -->
-
-## Classification
-
-
-#### Generate 2 point-clouds
-
-<br />
-
-- This time the generation is based on 2 centers.
-
-Compute the $\{x_i, y_i\}$ from its associate center
-at a random distance $d$
-in a random direction $\alpha$.
-
-_But_ the closest to the center the more probable. 
-
-for that we want to use a [normal distribution](https://en.wikipedia.org/wiki/Normal_distribution)
-
-- Plot them in 2 colors
-
-
----
-<!-- --------------------------------------------------------------- -->
-
-## Classification
-
-<br />
-<br />
-
-
-#### Compute a Linear Classifier
-
-<br />
-
-- Search for the best separation line 
-
-Perpendicular to the linear regression 
-build over the 2 point-clouds.
-
-<br />
-<br />

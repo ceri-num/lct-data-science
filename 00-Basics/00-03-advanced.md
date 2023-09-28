@@ -25,7 +25,7 @@ backgroundImage: url('../style/bg-imt.svg')
 
 - **Modular Programming**
 - **Inheritance and Interface**
-- **Test-driven development**
+- **Test-Driven Development**
 - **Let's play**
 
 ---
@@ -316,7 +316,7 @@ Setup a specific environment for the interpreter.
 
 - Modular Programming
 - **Inheritance and Interface**
-- Test-driven development
+- Test-Driven Development
 - Let's play
 
 ---
@@ -448,7 +448,7 @@ Suppose that:
 
 <br/>
 
-In python (_Dynamic-Type Power_), we do not care about the type.
+In python (_Dynamic-Typing Power_), we do not care about the type.
 We only care about existing methods.
 
 <br/>
@@ -462,8 +462,8 @@ def best( aThing, anotherThing )
     return anotherThing
 ```
 
-Suppose that _aThing_ and _anotherThing_ both has a _value_ method.
-(potentially: `type(aThing) != type(anotherThing)')
+Suppose that _aThing_ and _anotherThing_ both has a method: _value()_.
+(potentially: `type(aThing) != type(anotherThing)`)
 
 ---
 <!-- --------------------------------------------------------------- -->
@@ -514,18 +514,18 @@ and `__next__()`: return the next element of the iteration
 
 - Modular Programming
 - Inheritance and Interface
-- **Test-driven Development**
+- **Test-Driven Development**
 - Let's play
 
 ---
 <!-- --------------------------------------------------------------- -->
 
-## Test-driven Development - Test Comme First
+## Test-Driven Development - Test Comme First
 
 <br />
 <br />
 
-"Test-driven development (TDD) is a software development process relying on software requirements being converted to __test cases before__ software is fully developed, and tracking all software development by repeatedly testing the software against all test cases. This is as opposed to software being developed first and test cases created later." [Wikipedia sept. 2023](https://en.wikipedia.org/wiki/Test-driven_development)
+"Test-Driven Development (TDD) is a software development process relying on software requirements being converted to __test cases before__ software is fully developed, and tracking all software development by repeatedly testing the software against all test cases. This is as opposed to software being developed first and test cases created later." [Wikipedia sept. 2023](https://en.wikipedia.org/wiki/Test-driven_development)
 
 <br />
 
@@ -536,7 +536,7 @@ _Why?_ - To **test** but also to **well define** the functionality to develop.
 ---
 <!-- --------------------------------------------------------------- -->
 
-## Test-driven Development - Test Comme First
+## Test-Driven Development - Test Comme First
 
 #### You wan to develop a functionality<br />Develop the tests of the functionality first.
 
@@ -548,7 +548,7 @@ _Why?_ - To **test** but also to **well define** the functionality to develop.
 - need to manipulate points
 - compute distance
 - set a color
-- generate graphical representation
+- generate graphics
 - ...
 
 **3. Development:**
@@ -583,7 +583,7 @@ assert( point1.color() == BLUE )
 ---
 <!-- --------------------------------------------------------------- -->
 
-## Test-driven Development - Several Tools
+## Test-Driven Development - Several Tools
 
 One of the simplest: **pytest**
 
@@ -615,7 +615,7 @@ pip3 install pytest & pytest
 
 - Modular Programming
 - Inheritance and Interface
-- Test-driven development
+- Test-Driven Development
 - **Let's play**
 
 ---
