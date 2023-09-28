@@ -583,9 +583,7 @@ assert( point1.color() == BLUE )
 ---
 <!-- --------------------------------------------------------------- -->
 
-## Test-Driven Development - Several Tools
-
-One of the simplest: **pytest**
+## Test-Driven Development - A Simple Tool: _pytest_
 
 1. **define test cases** in test scripts (all starting by `test_`). 
 ```python
