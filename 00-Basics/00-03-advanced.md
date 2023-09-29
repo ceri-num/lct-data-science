@@ -601,7 +601,8 @@ def test_aSecondTestCase:
 
 ```sh
 # In your favorite shell:
-pip3 install pytest & pytest
+> pip3 install pytest
+> python3 -m pytest # or pytest directly
 ```
 
 ---
@@ -653,9 +654,16 @@ https://bitbucket.org/imt-mobisyst/lecture-data-science/raw/master/corrections/r
 ---
 <!-- --------------------------------------------------------------- -->
 
+## Let's play - Understand Other Developer
+
+Todo: UML
+
+---
+<!-- --------------------------------------------------------------- -->
+
 ## Let's play - Create a new Model
 
-### Model Plates:
+### Model Plates3:
 
 $$ y= py\left( \mathit{plate}(x) \right) + \mathit{error}$$
 
@@ -677,8 +685,57 @@ share the same `y`. - **Example:**
 </div>
 </div>
 
-- Develop the required method (by starting first with test-cases)
+- As a first use case we consider always 3 plates.
 
+---
+<!-- --------------------------------------------------------------- -->
+
+## Let's play - Create a new Model
+
+### Model Plates:
+
+- _ModelPlates3_ should inherit from _Model_.
+
+_Model_ class provide methods for cloud generation.
+It only requires a method returning an _y_ from a given _x_, the method _estimate_.
+This method is 
+
+- Create a class _ModelPlates3_
+- Develop the required method (_estimate_)
+
+- You should be capable of generating Clouds...
+
+---
+<!-- --------------------------------------------------------------- -->
+
+## Let's play - Generic Parameters Estimation
+
+<br />
+
+- Actually _ParametersEstimation_ is only computed by _ModelLinear_. 
+It is composed of tree steps:
+    - Initialize a first parameter tuple.
+    - Optimize a given parameter (a or a) considering a given precision
+    - Loop, by decrising the precision
+- However all Model Parameters' estimation can follow the same process.
+That for, this process can be defined at the root _Model_ class.
+
+<br />
+<br />
+
+---
+<!-- --------------------------------------------------------------- -->
+
+## Let's play - Generic Parameters Estimation
+
+- Define for each inherited class the methods: 
+    - `paramaterSize()`: returning the number of parameters
+    - `paramater(i)`: returning the value of the $i$th parameter
+    - `setParamater(i, aValue)`: to force the $i$th parameter
+    on a given value `aValue`.
+- Add test on `test_` scripts.
+- Move parameters estimation method from _ModelLinear_ to _Model_ class
+- Adapte those methods to be generic (on `parameter` methods rather than specific `a` and `b` parameters)
 
 ---
 <!-- --------------------------------------------------------------- -->
@@ -689,10 +746,11 @@ share the same `y`. - **Example:**
 
 ### Square Error
 
+<br />
+
 The optimization method based on the average error is not efficient.
 Resulting estimation does not care about huge error when most of the point fit the model. 
 
-- We want to test the optimization method on `ModelLinear` with the average square error.
 
 <br />
 <br />
@@ -714,17 +772,3 @@ Compared to _ModelPlate_, the `y` coordinate is computed in a smooth way between
 <br />
 <br />
 
----
-<!-- --------------------------------------------------------------- -->
-
-## Let's play - Generic optimization
-
-Each model is based on a finite set of parameters and the optimization method is always the same: One at a time, by decreasing the step precision.
-
-That for, the optimization process can be defined at the root _Model_ class.
-
-- Define for each inherited class the methods: 
-    - `paramaterSize()`: returning the number of parameters
-    - `paramater(i)`: returning the value of the $i$th parameter
-    - `setParamater(i, aValue)`: to force the $i$th parameter on the value `aValue`
-- Inspired by the _ModelLinear.optimizeX_ method and based on the `parameter` methods generalize model optimization on the class _Model_.

@@ -43,4 +43,9 @@ Responsible: <a href="mailto:guillaume.lozenguez@imt-nord-europe.fr">Guillaume L
 
 ```html
 <h3>Evaluation</h3>
+<p>
+The project aims to develop some simple classification  on top of and pytest tools.
+</P>
+It is expected a module for classification over geometrical points.
+
 ```
