@@ -33,13 +33,17 @@ backgroundImage: url('../style/bg-imt.svg')
 ## Classification
 
 The capacity to tag an observation with it appropriate descriptors.
-
 For instance a _country_ given hearth coordinates.
 
 Latitude | Longitude | Elevation | country
 ---------|-----------|-----------|-----------
+49.70    | 4.92      | 200       | France
+49.81    | 5.06      | 230       | Belgique
+45.78    | 3.09      | 450       | France
+42.70    | 0.79      | 980       | Espagne
+...      |           |           |   
 
-
+What about (_43.40_, _3.66_, _176_) ????
 
 ---
 <!-- --------------------------------------------------------------- -->

@@ -656,7 +656,7 @@ https://bitbucket.org/imt-mobisyst/lecture-data-science/raw/master/corrections/r
 
 ## Let's play - Understand Other Developer
 
-Todo: UML
+![width:480px](./model-inheritance.svg)
 
 ---
 <!-- --------------------------------------------------------------- -->
@@ -702,8 +702,8 @@ This method is
 
 - Create a class _ModelPlates3_
 - Develop the required method (_estimate_)
-
-- You should be capable of generating Clouds...
+<br />
+- You should be capable of generating Clouds (i.e. test-it)...
 
 ---
 <!-- --------------------------------------------------------------- -->
@@ -740,24 +740,6 @@ That for, this process can be defined at the root _Model_ class.
 ---
 <!-- --------------------------------------------------------------- -->
 
-## Let's play - Modify the solution
-
-<br />
-
-### Square Error
-
-<br />
-
-The optimization method based on the average error is not efficient.
-Resulting estimation does not care about huge error when most of the point fit the model. 
-
-
-<br />
-<br />
-
----
-<!-- --------------------------------------------------------------- -->
-
 ## Let's play - Create a new Model
 
 <br />
@@ -772,3 +754,21 @@ Compared to _ModelPlate_, the `y` coordinate is computed in a smooth way between
 <br />
 <br />
 
+
+---
+<!-- --------------------------------------------------------------- -->
+
+## Let's play - Modify the solution
+
+<br />
+
+### Square Error
+
+<br />
+
+The optimization method based on the average error is not efficient.
+Resulting estimation does not care about huge error when most of the point fit the model. 
+
+
+<br />
+<br />
