@@ -386,10 +386,10 @@ $$ y_i= ax_i+b+ random[0,\ e_{max}] $$
 
 - **Optimize $a$**
 
-Search a better $a$ at given distance $d$
+Search a better $a$ at given precision $p$
 
 Compute the average error
-with $a+d$ and $a-d$
+with $a+p$ and $a-pd$
 
 and keep the minimal solution.
 

@@ -110,7 +110,7 @@ from a given vector separation ?
 </div>
 <div class="one2">
 
-Fig
+![](./classif.png)
 
 </div>
 </div>
@@ -133,43 +133,183 @@ Fig
 ---
 <!-- --------------------------------------------------------------- -->
 
-## Classification
+## Classification - Overall Structure
 
+<div class="line">
+<div class="one2">
 
-#### Generate 2 point-clouds
+At the end, 
+we expect a module like this:
+
+</div>
+<div class="one2">
+
+![width:400px](./classif-module.svg)
+
+</div>
+</div>
+
+Only binar classification is considered in this exercise (2 classes)
+
+---
+<!-- --------------------------------------------------------------- -->
+
+## Classification - Generate data
+
+#### generator: A module function returning a $2\times N$ numpy.array
+
+<div class="line">
+<div class="one2">
+
+We wan to generate a 2-dimention
+data-set around a given position.
+
+_But_ the closest to the center
+the more probable. 
+
+Typically it is possible by using **Gaussian** approach:
+With [numpy](https://numpy.org/doc/stable/reference/random/generated/numpy.random.normal.html), for instance.
+
+([Normal Distribution on wikipedia](https://en.wikipedia.org/wiki/Normal_distribution))
+
+</div>
+<div class="one2">
+
+![](./center1.png)
+
+</div>
+
+- Generate 2 data-set and plot them in 2 colors
+
+---
+<!-- --------------------------------------------------------------- -->
+
+## Classification - Root Classifier Class
 
 <br />
 
-- This time the generation is based on 2 centers.
+- The root Classifier. 
 
-Compute the $\{x_i, y_i\}$ from its associate center
-at a random distance $d$
-in a random direction $\alpha$.
+The root _Classifer_ class of the Classifier inheritence tree is expected to regroup all the usefull methods commun to all classifier.
 
-_But_ the closest to the center the more probable. 
+- A verry simple classifier. 
 
-for that we want to use a [normal distribution](https://en.wikipedia.org/wiki/Normal_distribution)
+The class 1 and 2 are separated considering an _y_ value.
 
-- Plot them in 2 colors
+- Create this Classifier with the main method:
+    - `aClassifier.estimate( anObservation )`
+    returning the class of a given 2D-observation.
+
+<br />
+
+---
+<!-- --------------------------------------------------------------- -->
+
+## Classification - Classification error: 
+
+<br />
+
+- Simple _y_ Classifier is composed by 2 attributes.
+    - The _y_ coordinate
+    - A boolean to desambuguise which of the class (1 or 2)
+    are in which side of the _y_ frontiers (greater or lesser).
+<br />
+- Classifier efficiency relies directlly on the number of miss classification.
+Evaluation of a Classifier requires confront data-sets:
+    - `aClassifier.countErrors( aClass1DataSet, aClass2DataSet )`
+
+<br />
 
 
 ---
 <!-- --------------------------------------------------------------- -->
 
-## Classification
+## Classification - Parameter Optimization
+
+<br/>
+<br/>
+
+- **Optimize $y$ from given
+2 data-sets (one per class)**
+  - Initialize $y$ somewhere (average _y_ of the 2 data-sets)
+  - Search a better _$y$_ at given precision _$p$_
+  - Reapet by decrising _$p= p/2$_
+  (until _$p<\epsilon$_)
+
+<br/>
+<br/>
+
+
+
+---
+<!-- --------------------------------------------------------------- -->
+
+## Classification - ClassifierCircle
+
+
+### The Circle classifier try to cash the Class-1 data in a circle
+
+<br/>
+
+<div class="line">
+<div class="one2">
+
+  - Attibutes:
+  Circle center + radius.
+  - Class-2 data are data
+   outside the circle.
+
+</div>
+<div class="one2">
+
+
+
+</div>
+</div>
+
+Built the useful methods: **initialize** and **estimate**
+
+<br/>
+<br/>
+
+---
+<!-- --------------------------------------------------------------- -->
+
+## Classification - Make Optimization Generic
+
+<br />
+
+#### Transform the optimizer developped for Classifier<br />in a more generic version. 
+
+<br />
+
+- Use methods (_initParameters_, _getParameter_, _setParameter_, ...) rather than directly _y_, in the first version of parameter optimization.
+- Loop on all parameters in case of Classifier with several parameters.
+- Implement the parameter methods for Classifier and ClassifierCircle.
 
 <br />
 <br />
 
+---
+<!-- --------------------------------------------------------------- -->
+
+## Classification - ClassifierLinear
 
 #### Compute a Linear Classifier
 
-<br />
 
-- Search for the best separation line 
+<div class="line">
+<div class="one2">
+
+- **Search for the best separation:**
 
 Perpendicular to the linear regression 
-build over the 2 point-clouds.
+build over the 2 data-sets
 
-<br />
-<br />
+</div> 
+<div class="one2">
+
+![](./2center.png)
+
+</div> 
+</div> 
