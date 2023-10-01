@@ -33,7 +33,7 @@ backgroundImage: url('../style/bg-imt.svg')
 ## Classification
 
 The capacity to tag an observation with it appropriate descriptors.
-For instance a _country_ given hearth coordinates.
+For instance, a _country_ given hearth coordinates.
 
 Latitude | Longitude | Elevation | country
 ---------|-----------|-----------|-----------
@@ -149,7 +149,7 @@ we expect a module like this:
 </div>
 </div>
 
-Only binar classification is considered in this exercise (2 classes)
+Only binary classification is considered in this exercise (2 classes)
 
 ---
 <!-- --------------------------------------------------------------- -->
@@ -161,7 +161,7 @@ Only binar classification is considered in this exercise (2 classes)
 <div class="line">
 <div class="one2">
 
-We wan to generate a 2-dimention
+We wan to generate a 2-dimension
 data-set around a given position.
 
 _But_ the closest to the center
@@ -170,7 +170,7 @@ the more probable.
 Typically it is possible by using **Gaussian** approach:
 With [numpy](https://numpy.org/doc/stable/reference/random/generated/numpy.random.normal.html), for instance.
 
-([Normal Distribution on wikipedia](https://en.wikipedia.org/wiki/Normal_distribution))
+([Normal Distribution on Wikipedia](https://en.wikipedia.org/wiki/Normal_distribution))
 
 </div>
 <div class="one2">
@@ -190,9 +190,9 @@ With [numpy](https://numpy.org/doc/stable/reference/random/generated/numpy.rando
 
 - The root Classifier. 
 
-The root _Classifer_ class of the Classifier inheritence tree is expected to regroup all the usefull methods commun to all classifier.
+The root _Classifer_ class of the Classifier inheritance tree is expected to regroup all the useful methods common to all classifier.
 
-- A verry simple classifier. 
+- A very simple classifier. 
 
 The class 1 and 2 are separated considering an _y_ value.
 
@@ -214,7 +214,7 @@ The class 1 and 2 are separated considering an _y_ value.
     - A boolean to desambuguise which of the class (1 or 2)
     are in which side of the _y_ frontiers (greater or lesser).
 <br />
-- Classifier efficiency relies directlly on the number of miss classification.
+- Classifier efficiency relies directly on the number of misclassification.
 Evaluation of a Classifier requires confront data-sets:
     - `aClassifier.countErrors( aClass1DataSet, aClass2DataSet )`
 
@@ -233,7 +233,7 @@ Evaluation of a Classifier requires confront data-sets:
 2 data-sets (one per class)**
   - Initialize $y$ somewhere (average _y_ of the 2 data-sets)
   - Search a better _$y$_ at given precision _$p$_
-  - Reapet by decrising _$p= p/2$_
+  - Reapet by decreasing _$p= p/2$_
   (until _$p<\epsilon$_)
 
 <br/>
@@ -246,10 +246,7 @@ Evaluation of a Classifier requires confront data-sets:
 
 ## Classification - ClassifierCircle
 
-
 ### The Circle classifier try to cash the Class-1 data in a circle
-
-<br/>
 
 <div class="line">
 <div class="one2">
@@ -262,15 +259,12 @@ Evaluation of a Classifier requires confront data-sets:
 </div>
 <div class="one2">
 
-
+![width:400](./classif-circle.png)
 
 </div>
 </div>
 
-Built the useful methods: **initialize** and **estimate**
-
-<br/>
-<br/>
+Built core methods: **initialize** and **estimate**
 
 ---
 <!-- --------------------------------------------------------------- -->
@@ -279,7 +273,7 @@ Built the useful methods: **initialize** and **estimate**
 
 <br />
 
-#### Transform the optimizer developped for Classifier<br />in a more generic version. 
+#### Transform the optimizer developed for Classifier<br />in a more generic version. 
 
 <br />
 
