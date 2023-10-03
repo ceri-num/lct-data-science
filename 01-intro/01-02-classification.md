@@ -190,7 +190,7 @@ With [numpy](https://numpy.org/doc/stable/reference/random/generated/numpy.rando
 
 - The root Classifier. 
 
-The root _Classifer_ class of the Classifier inheritance tree is expected to regroup all the useful methods common to all classifier.
+The root _Classifier_ class of the Classifier inheritance tree is expected to regroup all the useful methods common to all classifier.
 
 - A very simple classifier. 
 
