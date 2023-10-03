@@ -39,13 +39,25 @@ Responsible: <a href="mailto:guillaume.lozenguez@imt-nord-europe.fr">Guillaume L
 </ol>
 ```
 
-# Evaluation: 
+# Evaluation - 1: 
 
 ```html
 <h3>Evaluation</h3>
 <p>
-The project aims to develop some simple classification  on top of and pytest tools.
-</P>
-It is expected a module for classification over geometrical points.
-
+The project aims to develop some simple classification tools into a <emph>classif</emph> python package.
+At the end, student-e-s (working alone or in a group of 2), return a <emph>.zip</emph> archive including the classif package and one example script.
+</p>
+<p>
+The exercise is composed of several requests.
+Each request comes with a test strip that permits to test the required functionalities (the tests cannot be modified).
+The evaluation care about the validation of the tests, the quality of the code (efficient and clean) and completeness of the example script.
+</p>
+<ol>
+<li>Data generator (<a target="_blank" href="https://bitbucket.org/imt-mobisyst/lecture-data-science/raw/master/corrections/test_classif_01_generation.py">test script</a>)</li>
+<li>Simple Classifier (<a target="_blank" href="https://bitbucket.org/imt-mobisyst/lecture-data-science/raw/master/corrections/test_classif_02_classClassifier.py">test script</a>)</li>
+<li>First optimization (<a target="_blank" href="https://bitbucket.org/imt-mobisyst/lecture-data-science/raw/master/corrections/test_classif_03_optimization.py">test script</a>)</li>
+<li>Circle Classifier (<a target="_blank" href="https://bitbucket.org/imt-mobisyst/lecture-data-science/raw/master/corrections/test_classif_04_classClassifierCircle.py">test script</a>)</li>
+<li>generic optimization (<a target="_blank" href="https://bitbucket.org/imt-mobisyst/lecture-data-science/raw/master/corrections/test_classif_05_optimization-v2.py">test script</a>)</li>
+<li>Linear Classifier (<a target="_blank" href="https://bitbucket.org/imt-mobisyst/lecture-data-science/raw/master/corrections/test_classif_06_classClassifierLinear.py">test script</a>)</li>
+</ol>
 ```
