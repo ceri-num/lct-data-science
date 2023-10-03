@@ -240,12 +240,12 @@ a given 2 classes data-set**
 </div>
 <div class="one2">
 
-![width:400](./classif-circle.png)
+![width:600](./classif-optim.svg)
 
 </div>
 </div>
 
-
+<br />
 
 ---
 <!-- --------------------------------------------------------------- -->
