@@ -226,18 +226,24 @@ Evaluation of a Classifier requires confront data-sets:
 
 ## Classification - Parameter Optimization
 
-<br/>
-<br/>
+<div class="line">
+<div class="one2">
 
-- **Optimize $y$ from given
-2 data-sets (one per class)**
-  - Initialize $y$ somewhere (average _y_ of the 2 data-sets)
-  - Search a better _$y$_ at given precision _$p$_
-  - Reapet by decreasing _$p= p/2$_
-  (until _$p<\epsilon$_)
+- **Optimize $y$ from
+a given 2 classes data-set**
+  - Initialize bounds (_y-min_, _y-max_)
+  - Set-up an expected precision _$p$_
+  - Search the optimal _y*_
+  in the range(_y-min_, _y-max_, _p_)
 
-<br/>
-<br/>
+
+</div>
+<div class="one2">
+
+![width:400](./classif-circle.png)
+
+</div>
+</div>
 
 
 
