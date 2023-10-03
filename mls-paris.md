@@ -44,14 +44,15 @@ Responsible: <a href="mailto:guillaume.lozenguez@imt-nord-europe.fr">Guillaume L
 ```html
 <h3>Evaluation</h3>
 <p>
-The project aims to develop some simple classification tools into a <emph>classif</emph> python package.
-At the end, student-e-s (working alone or in a group of 2), return a <emph>.zip</emph> archive including the classif package and one example script.
+The project aims to develop some simple classification tools into a <em>classif</em> python package.
+At the end, student-e-s (working alone or in a group of 2), return a <em>.zip</em> archive including the <em>classif</em> package and one example script.
 </p>
 <p>
 The exercise is composed of several requests.
 Each request comes with a test strip that permits to test the required functionalities (the tests cannot be modified).
 The evaluation care about the validation of the tests, the quality of the code (efficient and clean) and completeness of the example script.
 </p>
+test-scripts: (to upload aside your <em>classif</em> package) 
 <ol>
 <li>Data generator (<a target="_blank" href="https://bitbucket.org/imt-mobisyst/lecture-data-science/raw/master/corrections/test_classif_01_generation.py">test script</a>)</li>
 <li>Simple Classifier (<a target="_blank" href="https://bitbucket.org/imt-mobisyst/lecture-data-science/raw/master/corrections/test_classif_02_classClassifier.py">test script</a>)</li>
