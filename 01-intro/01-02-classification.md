@@ -282,7 +282,7 @@ Built core methods: **initialize** and **estimate**
 
 <br />
 
-- Use methods (_initParameters_, _getParameter_, _setParameter_, ...) rather than directly _y_, in the first version of parameter optimization.
+- Use methods (_parameterSize_, _getParameter_, _setParameter_, ...) rather than directly the parameter name (_y_ in Classifier) for the optimization.
 - Loop on all parameters in case of Classifier with several parameters.
 - Implement the parameter methods for Classifier and ClassifierCircle.
 
