@@ -42,7 +42,7 @@ def test_classifierParameters():
     assert( Cls.estimate( [4.7, 16.6] ) == 2 )
 
 def test_classifierCountErrors():
-    Cls= clf.ClassifierCircle()
+    Cls= clf.ClassifierLinear()
     Cls.setLine(0.0001, 10.0)
     
     data1= numpy.array([ [ 0.5774848, 2.40031608],
