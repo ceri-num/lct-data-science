@@ -26,7 +26,7 @@ def drawClassif( datas, a, b, fileNmae, style= ['bo'] ):
 
 def test_classifierInit():
     Cls= clf.ClassifierLinear()
-    assert( type( Cls ) is clf.Classifier )
+    assert( type( Cls ) is clf.ClassifierLinear )
     assert( Cls.estimate( [2.8, 12.6] ) in [1, 2] )
 
 def test_classifierParameters():

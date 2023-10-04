@@ -232,7 +232,7 @@ Evaluation of a Classifier requires confront data-sets:
 - **Optimize $y$ from
 a given 2 classes data-set**
   - Initialize bounds (_y-min_, _y-max_)
-  - Set-up an expected precision _$p$_
+  - Set up an expected precision _$p$_
   - Search the optimal _y*_
   in the range(_y-min_, _y-max_, _p_)
 

@@ -7,7 +7,7 @@ def test_classifier_parameter():
 
     assert( Cls.parameterSize() == 1 )
     
-    Cls.setParameter( 0, 10,0)
+    Cls.setParameter( 0, 10.0)
     assert( round( Cls.getParameter(0), 8) == 10.0 )
 
     # estimate should return the appropriate class-id for a given observation:

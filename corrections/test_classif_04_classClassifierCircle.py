@@ -17,7 +17,7 @@ def drawClassif( datas, center, radius, fileNmae, style= ['bo'] ):
 
 def test_classifierInit():
     Cls= clf.ClassifierCircle()
-    assert( type( Cls ) is clf.Classifier )
+    assert( type( Cls ) is clf.ClassifierCircle )
     assert( Cls.estimate( [2.8, 12.6] ) in [1, 2] )
 
 def test_classifierParameters():
