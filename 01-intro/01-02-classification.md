@@ -209,14 +209,13 @@ The class 1 and 2 are separated considering an _y_ value.
 
 <br />
 
-- Simple _y_ Classifier is composed by 2 attributes.
+- Simple _y_ Classifier is composed by 1 attribute.
     - The _y_ coordinate
-    - A boolean to desambuguise which of the class (1 or 2)
-    are in which side of the _y_ frontiers (greater or lesser).
+    - (class-1 is considered smaller than _y_ and class-2 greater).
 <br />
 - Classifier efficiency relies directly on the number of misclassification.
-Evaluation of a Classifier requires confront data-sets:
-    - `aClassifier.countErrors( aClass1DataSet, aClass2DataSet )`
+Evaluation of a Classifier requires confront data-set to their expected class-identifier (1 or 2):
+    - `aClassifier.countErrors( aDataSet1, 1 )`<br />`+ aClassifier.countErrors( aDataSet2, 2 )`
 
 <br />
 
