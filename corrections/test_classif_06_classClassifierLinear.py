@@ -68,4 +68,6 @@ def test_classifierCountErrors():
 
     assert( Cls.countErrors( data1, 1 ) == 0 )
     assert( Cls.countErrors( data2, 2 ) == 0 )
+
+    a, b= Cls.getLine()
     drawClassif( [data1, data2], a, b, 'plot_test_classifierLine_optimized.png', style= ['bo', 'go'] )
