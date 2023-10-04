@@ -64,7 +64,7 @@ def test_classifierCountErrors():
     assert( Cls.countErrors( data1, 1 ) == 0 )
     assert( Cls.countErrors( data2, 2 ) == 2 )
 
-    Cls.optimize()
+    Cls.optimize(data1, data2)
 
     assert( Cls.countErrors( data1, 1 ) == 0 )
     assert( Cls.countErrors( data2, 2 ) == 0 )
