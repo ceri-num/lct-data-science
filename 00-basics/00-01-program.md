@@ -248,20 +248,20 @@ shell: `python3 hello.py`
 ---
 <!-- --------------------------------------------------------------- -->
 
-## Python Programming Langauges
+## Python Programming Languages
 
 ### Sequential Instructions
 
 ```python
 
-# some Comments...
+# Some comments...
 
 a= 1              # - Asignment of a new integer variable
 b= a + 48.4       # - Asignment of a new floating point variable
                   #   as the result of the instruction: a + 48.4
-aString= "Hello"  # - Asignment of a new string variable (list of characters)
+aString= "Hello"  # - Assignment of a new string variable (list of characters)
 
-print( aString )  # - Call to the function print with aString as parameter
+print( aString )  # - Call to the function print with aString as one parameter
 
 result= aString.search('e') # - Call to the method search on the aString instance 
                             #   with a parameter 'e'
@@ -286,7 +286,7 @@ b= myWonderfullFunction( a, 40 )
 print( "Result: " + str(b) )
 ```
 
-_To notice:_ block separtion is delimited with space or tabulation indentation.
+_To notice:_ block separation is delimited with space or tabulation indentation.
 
 ---
 <!-- --------------------------------------------------------------- -->
@@ -349,7 +349,7 @@ b= myOwnPkg.myWonderfullFunction( a, 40 )
 pip install tqdm pytest
 ```
 
-- python _import_ relies on environement path variable:
+- python _import_ relies on environment path variable:
 
 ```python
 import sys
@@ -366,7 +366,7 @@ print( sys.path )
 
 - Code source: [github.com](https://github.com/python/cpython) - 63.5% Python / 34.6% C 
 - _Compile_ them _Interpret_ the program 
-- Memory Managment: _Dynamic Type_, _Garbage Collector_
+- Memory Management: _Dynamic Type_, _Garbage Collector_
 - Object-Oriented Programming (OOP)
 
 <br />
@@ -378,21 +378,21 @@ print( sys.path )
 ---
 <!-- --------------------------------------------------------------- -->
 
-## Python Specifity
+## Python Specificity
 
 <br />
 
-- **Rich language capabilities** (it is possible to do complexe things)
-- **Concise language** (complexe things requires few codes)
-- **Very rich community librairies** 
-(Most of the complexe things are already implemented)
-- **Interpretable** (the code is mostly OS independant)
+- **Rich language capabilities** (it is possible to do complex things)
+- **Concise language** (complex things require few codes)
+- **Very rich community libraries** 
+(most of the complex things are already implemented)
+- **Interpretable** (the code is mostly OS independent)
 - **Use a virtual machine** (including Garbage Collector)
-- **Not efficient** (but easy interface to C and C++)
+- **Not efficient** (but compatible with C and C++ libs)
 
 <br />
 
-As a results: a diversified use: _system administration_, _web_, _data science_, ect.
+As a result: a diversified use: _system administration_, _web_, _data science_, ect.
 
 
 ---
@@ -412,7 +412,7 @@ As a results: a diversified use: _system administration_, _web_, _data science_,
 
 ## Exercice: Search for a User's Groups
 
-#### Create a command that take a user name in parameter <br /> and return (print) all its groups.
+#### Create a command that takes a user name in parameter <br /> and return (print) all its groups.
 
 <br />
 
