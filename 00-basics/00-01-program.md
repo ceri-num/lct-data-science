@@ -6,7 +6,7 @@ backgroundImage: url('../style/bg-imt.svg')
 ---
 
 # Programming (Python) <br /> for Data-Science
-### The basics: The conputer <br /> and the program   
+### The basics: The computer <br /> and the program   
 
 <br />
 <br />
@@ -36,7 +36,7 @@ backgroundImage: url('../style/bg-imt.svg')
 <div class="line">
 <div class="one2">
 
-### At the begining was the Shell :
+### At the beginning was the Shell :
 
 **A computer program that exposes an operating system's services to a human user or other programs.** ([Wikipedia - Sep. 2023](https://en.wikipedia.org/wiki/Shell_(computing)))
 
@@ -108,14 +108,14 @@ Vocabulary: Prompt, Command
 
 ## Basics: Commands
 
-Classical syntaxe: `command --option -o argument1`
+Classical syntax: `command --option -o argument1`
 
 Example: `ls -a ~`
 
 ### Commands for Mastering Commands:
 
 - _man_: command and library manuel - example: `man cp`
-- _apropos_: command manuel - example: `apropos copy`
+- _apropos_: search in the manuels - example: `apropos search`
 - _whereis_: find the location of a resource - example: `whereis python3`
 - _alias_: create our own command - example: `alias listall="ls -a"`
 

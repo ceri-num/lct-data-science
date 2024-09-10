@@ -4,11 +4,11 @@
 
 ```html
 <p>
-This course focus on the basic of programming under the perspective of Data Science.
+This course focus on the basic of programming in the scope of Data Science.
 </p>
 <p>
 The contents are accessible on a Git repository on
-<a href="https://bitbucket.org/imt-mobisyst/lecture-data-science">BitBucket.org</a>
+<a href="https://github.com/ceri-num/lct-data-science/blob/master/module-paris.md">github.com</a>
 </p>
 <p>
 Responsible: <a href="mailto:guillaume.lozenguez@imt-nord-europe.fr">Guillaume LOZENGUEZ</a>
