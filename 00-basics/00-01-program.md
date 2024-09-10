@@ -229,12 +229,12 @@ For managing processes, OS attaches some elements to each one:<br />the _PID_ (P
 
 ## Codes, Programs and Scripts
 
-- **Codes**: Sequence of written instruction in a given programming langague
+- **Codes**: Sequence of written instruction in a given programming language
 - **Programs**: Executable binary on a OS
     - Specific to the OS (and potentially to the hardware)
     - Génarly compiled codes (example with _C_ and _gcc_)
 - **Scripts**: Interpretable piece of codes by a program - example:
-    - _python3_ is a programming langague
+    - _python3_ is a programming language
     - _python3_ is also a interpreter ([cpython](https://fr.wikipedia.org/wiki/CPython))
 
 file: hello.py
