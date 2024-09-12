@@ -80,11 +80,11 @@ $$ Y_i = f( X_i, \beta ) + e_i \quad \text{with:} $$
 <div class="one2">
 
 **Data set:**
-$$\{ y_i, x_{i1},, x_{i2}, \ldots, x_{ip} \}, \quad i \in [1, n]$$
+$$\left[ \{ y_i, x_{i1},, x_{i2}, \ldots, x_{ip} \}, \quad i \in [1, n] \right]$$
 
 <br />
 
-**Model:**
+**Model:** (a line in a $n$-dimentional space)
 $$y_i=  \beta_0 + \beta_1 x_{i1} + \ldots + \beta_p x_{ip} + e_i$$
 
 <br />
@@ -97,7 +97,7 @@ $$y_i= a x_{i} + b + e_i$$
 
 ![](./linear_regression.png)
 
-(Wikipedia)
+([Wikipedia](https://en.wikipedia.org/wiki/Linear_regression))
 
 </div>
 </div>
@@ -272,7 +272,7 @@ in a $100 \times 100$ rectangle
 with the `random()` function from the `random` Package for instance.
 (on [w3schools](https://www.w3schools.com/python/module_random.asp))
 
-- **Plot the piont-cloud as**
+- **Plot the point-cloud:**
 
 ```python
 plt.plot( listX, listY, color='green',
@@ -304,7 +304,7 @@ Compute $a$ and $b$ as $y=ax+b$
 Based on the 2 more distant points.
 
 **Brute-force algorythm:** 
-```python
+```
 forall combinaison pi, pj in data
     p1, p2 = max( dist(p1, p2), dist(pi, pj) )
 ```
@@ -333,7 +333,7 @@ forall combinaison pi, pj in data
 
 - **Compute the average error**
 
-The error between
+The error $|\widehat{y}_i - y_i|$ between
 the observed $y_i$
 and it estimation $\widehat{y}_i$ 
 
