@@ -17,6 +17,7 @@ Reviews the basics of a _Operating System_ (OS) like Linux and create our own co
 Presents Object-Oriented Programming (OOP) in Python and packaging. 
 
 - Slides: [00-02-oop.pdf](./pdf/00-02-oop.pdf).
+- Tests: [test_archive.zip](./tests/test_cloud.zip).
 
 ## Session 3 - First Exercise: Linear Regression
 

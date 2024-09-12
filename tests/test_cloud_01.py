@@ -1,7 +1,7 @@
 import myCloud as mc
 
-def test_cloud_01():
-    aCloud= mc.Cloud()
+def test_cloud():
+    aCloud= mc.Cloud() # Instanciate a new Cloud
     assert( type(aCloud) == mc.Cloud )
 
 # If the script is the main script interpreted by Python:
@@ -9,5 +9,5 @@ def test_cloud_01():
 if __name__ == "__main__" : 
     # Perform the test...
     print( "test Cloud (01)" )
-    test_cloud_01()
+    test_cloud()
     print( "OK" )
