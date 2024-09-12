@@ -14,10 +14,13 @@ Reviews the basics of a _Operating System_ (OS) like Linux and create our own co
 
 ## Session 2 - Modular Programming with Python3
 
-Presents Object-Oriented Programing (OOP) in Python and packaging. 
+Presents Object-Oriented Programming (OOP) in Python and packaging. 
 
 - Slides: [00-02-oop.pdf](./pdf/00-02-oop.pdf).
 
 ## Session 3 - First Exercise: Linear Regression
 
+Linear Regression represents a interesting use-case for a first experience of 
+processing data with python...
 
+- Slides: [00-02-oop.pdf](./pdf/01-01-firstManip.pdf).
