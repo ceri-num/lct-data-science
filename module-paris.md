@@ -21,6 +21,6 @@ Presents Object-Oriented Programming (OOP) in Python and packaging.
 ## Session 3 - First Exercise: Linear Regression
 
 Linear Regression represents a interesting use-case for a first experience of 
-processing data with python...
+processing data with Python.
 
-- Slides: [00-02-oop.pdf](./pdf/01-01-firstManip.pdf).
+- Slides: [01-01-firstManip.pdf](./pdf/01-01-firstManip.pdf).
