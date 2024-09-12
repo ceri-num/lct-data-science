@@ -6,11 +6,13 @@ The contents are accessible on a Git repository on [github.com](https://github.c
 
 - Responsible: [Guillaume LOZENGUEZ](mailto:guillaume.lozenguez@imt-nord-europe.fr).
 
+
 ## Session 1 - The basics: The computer and the program
 
 Reviews the basics of a _Operating System_ (OS) like Linux and create our own commands in _Python3_.
 
 - Slides: [00-01-program.pdf](./pdf/00-01-program.pdf).
+
 
 ## Session 2 - Modular Programming with Python3
 
@@ -18,6 +20,7 @@ Presents Object-Oriented Programming (OOP) in Python and packaging.
 
 - Slides: [00-02-oop.pdf](./pdf/00-02-oop.pdf).
 - Tests: [test_archive.zip](./tests/test_cloud.zip).
+
 
 ## Session 3 - First Exercise: Linear Regression
 
