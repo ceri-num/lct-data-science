@@ -253,15 +253,25 @@ A huge gallery on : [https://matplotlib.org](https://matplotlib.org/stable/galle
 ## Generate and Annalyse Data
 
 - **Linear Regression**
-    - Generate 2D points
-    - Compute the linear parameters
+    - Compute the parameters of a linear regression
 
 ---
 <!-- --------------------------------------------------------------- -->
 
 ## Linear Regression
 
-#### Generate a 2D point-cloud
+#### Setup your working directory
+
+- Get a fresh start with the [MyCloud Project Correction](https://github.com/ceri-num/lct-data-science/raw/master/corrections/correction-test-cloud.zip)
+- Initialize a `RegresionLinear` _class_ into a `regression.py` file.
+- Initialize a `test_linear.py` file for testing purpose.
+
+
+
+---
+<!-- --------------------------------------------------------------- -->
+
+## Linear Regression : from the class _Coud_ : 
 
 <div class="line">
 <div class="one2">
@@ -287,6 +297,28 @@ plt.plot( listX, listY, color='green',
 </div>
 </div>
 
+---
+<!-- --------------------------------------------------------------- -->
+
+## Linear Regression
+
+#### Initialize the class: **RegressionLinear**
+
+- RegressionLinear is composed by at least 3 elements
+    * a point cloud (the data)
+    * The two parameters of the Regression: $a$ and $b$. <br />(by default: $a=1$ and $b=0$)
+- A method `draw` generates a _pyplot_ plot 
+    * The point cloud
+    * The line: $y=ax+b$ $\quad$ (with $x\in [-10, 110]$)
+
+
+```
+Processing the `test_linear.py` script 
+should result in the expected drawing...
+```
+
+
+
 
 ---
 <!-- --------------------------------------------------------------- -->
@@ -303,9 +335,9 @@ plt.plot( listX, listY, color='green',
 Compute $a$ and $b$ as $y=ax+b$
 Based on the 2 more distant points.
 
-**Brute-force algorythm:** 
+**Brute-force algorithm:** 
 ```
-forall combinaison pi, pj in data
+for all combination pi, pj in data
     p1, p2 = max( dist(p1, p2), dist(pi, pj) )
 ```
 
@@ -389,9 +421,9 @@ $$ y_i= ax_i+b+ random[0,\ e_{max}] $$
 Search a better $a$ at given precision $p$
 
 Compute the average error
-with $a+p$ and $a-pd$
+with $a+p$ and $a-p$
 
-and keep the minimal solution.
+and keep the best solution.
 
 Then repeat as necessary
 
@@ -423,11 +455,11 @@ When $a$ is fixed, use the process on $b$.
 
 - **Repeat Again**
 
-You can repeat it with $d=d/2$ 
-and again until $d < \epsilon$
+You can repeat it with $p=p/2$ 
+and again until $p < \epsilon$
 
-$\epsilon$ is the maximal autorized error
-on the model parrameters
+$\epsilon$ is the maximal authorized error
+on the model parameters
 (e.g. $\epsilon=0.0001$)
 
 $a$ and $b$ are $\epsilon$-optimal
