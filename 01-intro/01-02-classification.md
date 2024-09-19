@@ -18,6 +18,12 @@ backgroundImage: url('../style/bg-imt.svg')
 ![bg](../style/bg-tittle.svg)
 
 ---
+
+#### La vie est un éternel recommencement…
+
+#### **The life is an eternal restarting…**
+
+---
 <!-- --------------------------------------------------------------- -->
 
 ![bg](../style/bg-toc3.svg)
@@ -127,34 +133,10 @@ from a given vector separation ?
 - Classification
 - **Let's play**
 
-
-
-
 ---
 <!-- --------------------------------------------------------------- -->
 
-## Classification - Overall Structure
-
-<div class="line">
-<div class="one2">
-
-At the end, 
-we expect a module like this:
-
-</div>
-<div class="one2">
-
-![width:400px](./classif-module.svg)
-
-</div>
-</div>
-
-Only binary classification is considered in this exercise (2 classes)
-
----
-<!-- --------------------------------------------------------------- -->
-
-## Classification - Generate data
+## Classifier - Generate data
 
 #### generator: A module function returning a $2\times N$ numpy.array
 
@@ -184,38 +166,18 @@ With [numpy](https://numpy.org/doc/stable/reference/random/generated/numpy.rando
 ---
 <!-- --------------------------------------------------------------- -->
 
-## Classification - Root Classifier Class
-
-<br />
-
-- The root Classifier. 
-
-The root _Classifier_ class of the Classifier inheritance tree is expected to regroup all the useful methods common to all classifier.
-
-- A very simple classifier. 
-
-The class 1 and 2 are separated considering an _y_ value.
-
-- Create this Classifier with the main method:
-    - `aClassifier.estimate( anObservation )`
-    returning the class of a given 2D-observation.
-
-<br />
-
----
-<!-- --------------------------------------------------------------- -->
-
-## Classification - Classification error: 
+## Classifier - Simple-Y
 
 <br />
 
 - Simple _y_ Classifier is composed by 1 attribute.
-    - The _y_ coordinate
+    - The _y_ coordinate, modeling a horizontal separation.
     - (class-1 is considered smaller than _y_ and class-2 greater).
 <br />
 - Classifier efficiency relies directly on the number of misclassification.
-Evaluation of a Classifier requires confront data-set to their expected class-identifier (1 or 2):
-    - `aClassifier.countErrors( aDataSet1, 1 )`<br />`+ aClassifier.countErrors( aDataSet2, 2 )`
+Evaluation of a Classifier requires to confront data-set to their expected class-identifier (1 or 2).
+<br />
+- Plot the horizontal separation and count the errors.
 
 <br />
 
@@ -223,13 +185,13 @@ Evaluation of a Classifier requires confront data-set to their expected class-id
 ---
 <!-- --------------------------------------------------------------- -->
 
-## Classification - Parameter Optimization
+## Classifier - Simple-Y : Parameter Optimization
 
 <div class="line">
 <div class="one2">
 
 - **Optimize $y$ from
-a given 2 classes data-set**
+a given 2 class data-set**
   - Initialize bounds (_y-min_, _y-max_)
   - Set up an expected precision _$p$_
   - Search the optimal _y*_
@@ -249,15 +211,15 @@ a given 2 classes data-set**
 ---
 <!-- --------------------------------------------------------------- -->
 
-## Classification - ClassifierCircle
+## Classifier - Circle : 
 
-### The Circle classifier try to cash the Class-1 data in a circle
+### A Circle tries to cash the Class-1 data
 
 <div class="line">
 <div class="one2">
 
-  - Attibutes:
-  Circle center + radius.
+  - Attibutes (3):
+  Circle center coordinates + radius.
   - Class-2 data are data
    outside the circle.
 
@@ -269,25 +231,29 @@ a given 2 classes data-set**
 </div>
 </div>
 
-Built core methods: **initialize** and **estimate**
-
 ---
 <!-- --------------------------------------------------------------- -->
 
-## Classification - Make Optimization Generic
+## Classifier - Circle : 
 
-<br />
+### `ClassifierCircle` should implement
 
-#### Transform the optimizer developed for Classifier<br />in a more generic version. 
+<div class="line">
+<div class="one2">
 
-<br />
+  - plot()
+  - countError()
+  - getParameterLimits()
+  - optimizeParameters( precision )
 
-- Use methods (_parameterSize_, _getParameter_, _setParameter_, ...) rather than directly the parameter name (_y_ in Classifier) for the optimization.
-- Loop on all parameters in case of Classifier with several parameters.
-- Implement the parameter methods for Classifier and ClassifierCircle.
+</div>
+<div class="one2">
 
-<br />
-<br />
+![width:400](./classif-circle.png)
+
+</div>
+</div>
+
 
 ---
 <!-- --------------------------------------------------------------- -->
@@ -302,8 +268,7 @@ Built core methods: **initialize** and **estimate**
 
 - **Search for the best separation:**
 
-Perpendicular to the linear regression 
-build over the 2 data-sets
+But maybe it is time to use inheritance <br /> to factorize parameter optimization algorithm into a root class
 
 </div> 
 <div class="one2">
@@ -312,3 +277,22 @@ build over the 2 data-sets
 
 </div> 
 </div> 
+
+
+Inheritence: on [Wikipedia](https://en.wikipedia.org/wiki/Inheritance_(object-oriented_programming)) and [in python](https://www.w3schools.com/python/python_inheritance.asp)
+
+---
+<!-- --------------------------------------------------------------- -->
+
+## Classification - Make Optimization Generic
+
+
+#### Transform the optimizer developed for Classifier<br />in a more generic version. 
+
+- manipulate a list of parameters with methods like _getParameters_, _setParameters_, ...  rather than directly the parameter name (_y_ in `ClassifierSimpleY`) for the optimization.
+- Loop on all parameters in case of Classifier with several parameters.
+- Implement the parameter methods for `ClassifierSimpleY` and `ClassifierCircle`.
+- Develope a new chlid: `ClassifierLinear`.
+
+<br />
+<br />

@@ -22,9 +22,19 @@ Presents Object-Oriented Programming (OOP) in Python and packaging.
 - Tests: [test_archive.zip](https://github.com/ceri-num/lct-data-science/raw/master/tests/test_cloud.zip).
 - Correction: [correction_cloud.zip](https://github.com/ceri-num/lct-data-science/raw/master/corrections/correction-test-cloud.zip).
 
+
 ## Session 3 - First Exercise: Linear Regression
 
 Linear Regression represents a interesting use-case for a first experience of 
 processing data with Python.
 
 - Slides: [01-01-firstManip.pdf](./pdf/01-01-firstManip.pdf).
+
+
+## Session 4 - second life: Classification
+
+Let play with another classical Data-Science problem: Classification.
+
+- Slides: [01-02-classification.pdf](./pdf/01-02-classification.pdf).
+
+## Session 5 - Modular programing in Python
