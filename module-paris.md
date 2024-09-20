@@ -19,9 +19,8 @@ Reviews the basics of a _Operating System_ (OS) like Linux and create our own co
 Presents Object-Oriented Programming (OOP) in Python and packaging. 
 
 - Slides: [00-02-oop.pdf](./pdf/00-02-oop.pdf).
-- Tests: [test_archive.zip](https://github.com/ceri-num/lct-data-science/raw/master/tests/test_cloud.zip).
-- Correction: [correction_cloud.zip](https://github.com/ceri-num/lct-data-science/raw/master/corrections/correction-test-cloud.zip).
-
+- Tests: [test_archive.zip](https://github.com/ceri-num/lct-data-science/raw/master/archives/test-cloud.zip).
+- Correction: [myCloud.py](https://github.com/ceri-num/lct-data-science/raw/master/exercices/cloud/myCloud.py).
 
 ## Session 3 - First Exercise: Linear Regression
 
@@ -29,7 +28,7 @@ Linear Regression represents a interesting use-case for a first experience of
 processing data with Python.
 
 - Slides: [01-01-firstManip.pdf](./pdf/01-01-firstManip.pdf).
-
+- Tests: [test_archive.zip](https://github.com/ceri-num/lct-data-science/raw/master/archives/test-regressor.zip).
 
 ## Session 4 - second life: Classification
 

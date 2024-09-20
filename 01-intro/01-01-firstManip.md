@@ -152,7 +152,7 @@ Configurable type:
 myTab= np.array([127, 128, 129], dtype=np.int8)
 ```
 
-Numerous of useful function ([average](https://numpy.org/doc/stable/reference/generated/numpy.average.html) for instance):
+Numerous useful function ([average](https://numpy.org/doc/stable/reference/generated/numpy.average.html) for instance):
 
 ```python
 avg = np.average(a)
@@ -258,41 +258,60 @@ A huge gallery on : [https://matplotlib.org](https://matplotlib.org/stable/galle
 ---
 <!-- --------------------------------------------------------------- -->
 
-## Linear Regression
+## Linear Regression (test 01)
 
-#### Setup your working directory
+### Setup your working directory:
 
 - Get a fresh start with the [MyCloud Project Correction](https://github.com/ceri-num/lct-data-science/raw/master/corrections/correction-test-cloud.zip)
 - Initialize a `RegresionLinear` _class_ into a `regression.py` file.
 - Initialize a `test_linear.py` file for testing purpose.
 
 
+---
+<!-- --------------------------------------------------------------- -->
+
+## Linear Regression (test 01)
+
+### Hello-World functionalities
+
+As first functionality, we aims to initiate a `RegresionLinear` over a data-set (i.e a point cloud).
+
+- The class is composed by at least 3 elements:
+    * a point cloud (the data)
+    * The two parameters of the Regression: <br />$a$ the slope and $b$ the y-intercept. <br />(by default: $a=1$ and $b=0$)
 
 ---
 <!-- --------------------------------------------------------------- -->
 
-## Linear Regression : from the class _Coud_ : 
+## Linear Regression (test 01)
+
+### Accessors:
+
+As a result, the `RegresionLinear` class defines the methods:
+
+- `data(self):` accessing the point cloud
+- `slope(self):` accessing the slope parameter
+- `yIntercept(self):` accessing the y-intercept parameter
+- `estimate(self, x):` estimating an $y$ given a $x$ ($a\times x+b$)
+
+---
+<!-- --------------------------------------------------------------- -->
+
+## Linear Regression (test 01)
+
+### Then visualization:
 
 <div class="line">
 <div class="one2">
 
-- **Generate random points**
-in a $100 \times 100$ rectangle
-
-with the `random()` function from the `random` Package for instance.
-(on [w3schools](https://www.w3schools.com/python/module_random.asp))
-
-- **Plot the point-cloud:**
-
-```python
-plt.plot( listX, listY, color='green',
-            marker='o', linestyle=' ')
-```
+- A method `draw` generates a _pyplot_ plot: The point cloud,
+    The line: $y=ax+b$ <br /> (with $x\in [-10, 110]$)
+- At this point, the script `test_linear.py` tests the accessors and draw a random cloud.
 
 </div>
 <div class="one2">
 
-![](./cloud-simple.png)
+![](./regression.png)
 
 </div>
 </div>
@@ -300,32 +319,28 @@ plt.plot( listX, listY, color='green',
 ---
 <!-- --------------------------------------------------------------- -->
 
-## Linear Regression
+## Linear Regression (test 01)
 
-#### Initialize the class: **RegressionLinear**
+### Then visualization:
 
-- RegressionLinear is composed by at least 3 elements
-    * a point cloud (the data)
-    * The two parameters of the Regression: $a$ and $b$. <br />(by default: $a=1$ and $b=0$)
-- A method `draw` generates a _pyplot_ plot 
-    * The point cloud
-    * The line: $y=ax+b$ $\quad$ (with $x\in [-10, 110]$)
+_Astuce:_ `draw` method should lookalike:
 
-
-```
-Processing the `test_linear.py` script 
-should result in the expected drawing...
+```python
+def plot( self, file="regression.png" ):
+    plt.plot( the cloud ... )
+    plt.plot(  the line a*x+b ... )
+    plt.savefig( file )
+    plt.clf()
 ```
 
-
-
+This way, the drawing is saved aside <br />rather than in a popped window.
 
 ---
 <!-- --------------------------------------------------------------- -->
 
-## Linear Regression
+## Linear Regression (test 02)
 
-#### Estimate the linear parameters
+### First estimation of linear parameters
 
 <div class="line">
 <div class="one2">
@@ -341,9 +356,6 @@ for all combination pi, pj in data
     p1, p2 = max( dist(p1, p2), dist(pi, pj) )
 ```
 
-- **Plot the line** from $-10$ to $110$
-- **Compute the average error**
-
 </div>
 <div class="one2">
 
@@ -352,13 +364,12 @@ for all combination pi, pj in data
 </div>
 </div>
 
-
 ---
 <!-- --------------------------------------------------------------- -->
 
-## Linear Regression
+## Linear Regression (test 02)
 
-#### Estimate the linear parameters
+### First estimation of linear parameters
 
 <div class="line">
 <div class="one2">
@@ -371,6 +382,8 @@ and it estimation $\widehat{y}_i$
 
 $$\widehat{y}_i = ax_i+b$$
 
+- **Tests:** with enough points. <br /> The line is on a diagonal <br /> The average error is close to $33.3$
+
 </div>
 <div class="one2">
 
@@ -382,7 +395,7 @@ $$\widehat{y}_i = ax_i+b$$
 ---
 <!-- --------------------------------------------------------------- -->
 
-## Linear Regression
+## Linear Regression (test 02)
 
 #### Generate again a 2D point-cloud
 
@@ -395,7 +408,12 @@ According to a linear model:
 Given $a$, $b$ and $e_{max}$
 
 $$ x_i= random[0,\ 100] $$
-$$ y_i= ax_i+b+ random[0,\ e_{max}] $$
+$$ y_i= ax_i+b+ random[-e_{max},\ e_{max}] $$
+
+(Should be associated to `Cloud` class)
+
+- **Test:** First parameter estimation of 
+`RegresionLinear` should not be far.
 
 </div>
 <div class="one2">
@@ -408,46 +426,48 @@ $$ y_i= ax_i+b+ random[0,\ e_{max}] $$
 ---
 <!-- --------------------------------------------------------------- -->
 
-## Linear Regression
+## Linear Regression (test 03)
 
+### Optimize the linear parameters:
 
-#### Optimize the linear parameters
+Search a better $a$ and $b$ at given delta $d$
 
-<div class="line">
-<div class="one2">
+Create a method `testParametersDelta` testing:
 
-- **Optimize $a$**
+- _averageError_ with: $(a, \quad b)$
+- _averageError_ with: $(a-d, \quad b)$
+- _averageError_ with: $(a+d, \quad b)$
+- _averageError_ with: $(a, \quad b-d)$
+- _averageError_ with: $(a, \quad b+d)$
 
-Search a better $a$ at given precision $p$
-
-Compute the average error
-with $a+p$ and $a-p$
-
-and keep the best solution.
-
-Then repeat as necessary
-
-- **Optimize $b$**
-
-When $a$ is fixed, use the process on $b$.
-
-</div>
-<div class="one2">
-
-![](./cloud-regressor2.png)
-
-
-</div>
-</div>
-
+and keep the best option.
 
 ---
 <!-- --------------------------------------------------------------- -->
 
-## Linear Regression
+## Linear Regression (test 03)
+
+### Optimize the linear parameters:
+
+Considering that `testParametersDelta` return _True_ if $a$ or $b$ changed
+
+Next method will optimize the parameters at precision $delta$: 
+
+```python
+def optimizeParametersDelta( self, delta ):
+    change= False
+    while self.testParametersDelta(delta) :
+        change= True
+    return change
+```
+
+---
+<!-- --------------------------------------------------------------- -->
+
+## Linear Regression (test 04)
 
 
-#### Optimize the linear parameters
+### Optimize the linear parameters
 
 
 <div class="line">
@@ -455,8 +475,8 @@ When $a$ is fixed, use the process on $b$.
 
 - **Repeat Again**
 
-You can repeat it with $p=p/2$ 
-and again until $p < \epsilon$
+You can repeat it with $delta=delta/2$ 
+and again until $delta < \epsilon$
 
 $\epsilon$ is the maximal authorized error
 on the model parameters
@@ -464,6 +484,7 @@ on the model parameters
 
 $a$ and $b$ are $\epsilon$-optimal
 
+- (test script not provided)
 </div>
 <div class="one2">
 
@@ -481,7 +502,7 @@ $a$ and $b$ are $\epsilon$-optimal
 <br/>
 <br/>
 
-#### Generate again the linear parameters
+### Generate again the linear parameters
 
 <br/>
 
