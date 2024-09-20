@@ -497,7 +497,7 @@ $a$ and $b$ are $\epsilon$-optimal
 ---
 <!-- --------------------------------------------------------------- -->
 
-## Linear Regression
+## Linear Regression - Optional
 
 <br/>
 <br/>
