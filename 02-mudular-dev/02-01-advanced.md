@@ -25,7 +25,7 @@ backgroundImage: url('../style/bg-imt.svg')
 
 - **Modular Programming**
 - **Inheritance and Interface**
-- **Test-Driven Development**
+- **Good parctices...**
 - **Let's play**
 
 ---
@@ -278,8 +278,9 @@ sister-modules can be imported relatively.
 For instance, in `craft.py`
 
 ```python
-import .art
-import ..science
+import .art as art
+import .. as encyclopedia
+import ..science as science
 
 ...
 ```
@@ -316,7 +317,7 @@ Setup a specific environment for the interpreter.
 
 - Modular Programming
 - **Inheritance and Interface**
-- Test-Driven Development
+- Good parctices...
 - Let's play
 
 ---
@@ -508,13 +509,33 @@ and `__next__()`: return the next element of the iteration
 ---
 <!-- --------------------------------------------------------------- -->
 
+## Exeptions...
+
+<br />
+<br />
+<br />
+
+To deal with inappropriate events (error)...
+
+[on docs.python.org](https://docs.python.org/fr/3/tutorial/errors.html)
+
+
+<br />
+<br />
+<br />
+<br />
+<br />
+
+---
+<!-- --------------------------------------------------------------- -->
+
 ![bg](../style/bg-toc3.svg)
 
 <br />
 
 - Modular Programming
 - Inheritance and Interface
-- **Test-Driven Development**
+- **Good practices...**
 - Let's play
 
 ---
@@ -558,7 +579,7 @@ We know where we go...
 </div>
 <div class="one2">
 
-**2. Test:**
+**2. Design with a test:**
 
 ```python
 point1= Point(10.0, 34.5)
@@ -608,167 +629,268 @@ def test_aSecondTestCase:
 ---
 <!-- --------------------------------------------------------------- -->
 
+## Documents - The 4 mantras
+
+<br />
+<br />
+<br />
+
+- Clear code
+- Comments
+- A structured project with an entrance point: the _README_ file
+- The documentation...
+
+<br />
+<br />
+<br />
+
+---
+<!-- --------------------------------------------------------------- -->
+
+## Clear code
+
+<br />
+<br />
+<br />
+
+- Name your variables, function, class and method adequately...
+- Small atomic function/methods
+- Setup and follow a good practice guide...
+
+#### Python Enhancement Proposals : [pep.python.org](https://peps.python.org/pep-0008/)
+
+
+<br />
+<br />
+<br />
+<br />
+
+---
+<!-- --------------------------------------------------------------- -->
+
+## Comments
+
+```python
+def distance(p1, p2):
+    # Computes the Euclidean distance between two 2-dimension points. 
+
+    ...
+
+```
+
+or:
+
+```python
+def distance(p1, p2):
+    '''
+    Computes the Euclidean distance between two 2-dimension points. 
+    '''
+
+    ...
+
+```
+
+
+---
+<!-- --------------------------------------------------------------- -->
+
+## Structuration & Entrance Point
+
+
+<div class="line">
+<div class="one2">
+
+### Classical directory structuration
+
+**Project directory**
+&ensp;&#9504; **docs**
+&ensp;&#9504; **src**
+&ensp;&#9504; **tests**
+&ensp;&#9494; `LICENCE.txt`
+&ensp;&#9494; `README.md`
+&ensp;&#9494; `pyproject.toml`
+
+</div>
+<div class="one2">
+
+### `README.md` the entrance point:
+
+```markdown
+# Project Title 
+
+brief description
+
+Meta-data: Authors, Licences, ...
+
+## Installation Instructions
+
+
+## Get-Started Instructions
+
+
+## ...
+```
+
+</div>
+</div>
+
+---
+<!-- --------------------------------------------------------------- -->
+
+## Structuration & Entrance point
+
+
+<div class="line">
+<div class="one2">
+
+### Classical directory structuration
+
+**Project directory**
+&ensp;&#9504; **docs**
+&ensp;&#9504; **src**
+&ensp;&#9504; **tests**
+&ensp;&#9494; `LICENCE.txt`
+&ensp;&#9494; `README.md`
+&ensp;&#9494; `pyproject.toml`
+
+</div>
+<div class="one2">
+
+### `README.md` in Markdown:
+
+``Markdown is a lightweight markup language for creating formatted text using a plain-text editor'' [wikipedia](https://en.wikipedia.org/wiki/Markdown)
+
+
+```markdown
+# Project Title 
+
+brief description
+
+## Section title
+
+...
+```
+
+</div>
+</div>
+
+---
+<!-- --------------------------------------------------------------- -->
+
+## Structuration - Pip compatible
+
+<div class="line">
+<div class="one2">
+
+### Classical directory structuration
+
+**project_directory**
+&ensp;&#9504; **docs**
+&ensp;&#9504; **src**
+&ensp;&#9475; &ensp;&#9494; **myPkg**
+&ensp;&#9475; &ensp;&ensp; &ensp;&#9494; \_\_init__.py
+&ensp;&#9504; **tests**
+&ensp;&#9504; `LICENCE.txt`
+&ensp;&#9504; `README.md`
+&ensp;&#9494; `pyproject.toml`
+
+then: `> pip install .`
+
+</div>
+<div class="one2">
+
+### `pyproject.toml`
+
+Make your project compatible with `pip`
+
+```toml
+[build-system]
+requires = ["flit_core >= 3.4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "myPkg"
+version = "0.1.0"
+authors = [
+  { name="Guillaume Lozenguez", email="g.l@imt-ne.fr" },
+]
+description = "My beautifull package"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+```
+
+</div>
+</div>
+
+
+---
+<!-- --------------------------------------------------------------- -->
+
+## Documents
+
+
+### Why not in MarkDown ?
+
+**project_directory**
+&ensp;&#9504; **docs**
+&ensp;&#9504; &ensp;&#9504; index.md
+&ensp;&#9504; &ensp;&#9504; aTutorial.md
+&ensp;&#9504; &ensp;&#9494; explainations.md
+&ensp;&#9504; **src**
+&ensp; ...
+
+Then, a tools as `mkdocs` can generate beautifull web/pdf documention... 
+
+
+---
+<!-- --------------------------------------------------------------- -->
+
 ![bg](../style/bg-toc3.svg)
 
 <br />
 
 - Modular Programming
 - Inheritance and Interface
-- Test-Driven Development
+- Good parctices...
 - **Let's play**
 
 ---
 <!-- --------------------------------------------------------------- -->
 
-## Let's play - Again Regressor exercise
-
-<br />
-<br />
-
-- Get a correction including _Cloud_, _Model_ and _ModelLinear_
-- Understand the _tree-structure_ of Modules and Classes
-- Increment with a new _Model_.
-- Modify the solution.
-
-<br />
-<br />
-<br />
-
----
-<!-- --------------------------------------------------------------- -->
-
-## Let's play - Understand Other Developer
-
-<br />
-<br />
-
-- Get the correction from :
-https://bitbucket.org/imt-mobisyst/lecture-data-science/raw/master/corrections/regressor.zip
-- Unzip and run example script.
-- Try to understand the code
-- Run the tests
-
-<br />
-<br />
-
----
-<!-- --------------------------------------------------------------- -->
-
-## Let's play - Understand Other Developer
-
-![width:480px](./model-inheritance.svg)
-
----
-<!-- --------------------------------------------------------------- -->
-
-## Let's play - Create a new Model
-
-### Model Plates3:
-
-$$ y= py\left( \mathit{plate}(x) \right) + \mathit{error}$$
-
-* $py(p)$ the `y` coordinate of a plate `p`.
-* $\mathit{plate}(x)$ the plate at the coordinate `x`.
-
+## Let's play - Classifier problem
 
 <div class="line">
 <div class="one2">
 
-In other terms, all `x` of a given plate
-share the same `y`. - **Example:**
+### 1. Decompose into <br />classes and methods
 
 </div>
 <div class="one2">
 
-![](model-plates.png)
+![width:400](./classifiers.svg)
 
 </div>
 </div>
 
-- As a first use case we consider always 3 plates.
-
 ---
 <!-- --------------------------------------------------------------- -->
 
-## Let's play - Create a new Model
+## Let's play - Classifier problem
 
-### Model Plates:
+<div class="line">
+<div class="one2">
 
-- _ModelPlates3_ should inherit from _Model_.
+### 2. Derivate the structure of<br />our project directory
 
-_Model_ class provide methods for cloud generation.
-It only requires a method returning an _y_ from a given _x_, the method _estimate_.
-This method is 
+</div>
+<div class="one2">
 
-- Create a class _ModelPlates3_
-- Develop the required method (_estimate_)
-<br />
-- You should be capable of generating Clouds (i.e. test-it)...
+![width:400](./classifiers.svg)
 
----
-<!-- --------------------------------------------------------------- -->
-
-## Let's play - Generic Parameters Estimation
-
-<br />
-
-- Actually _ParametersEstimation_ is only computed by _ModelLinear_. 
-It is composed of tree steps:
-    - Initialize a first parameter tuple.
-    - Optimize a given parameter (a or a) considering a given precision
-    - Loop, by decrising the precision
-- However all Model Parameters' estimation can follow the same process.
-That for, this process can be defined at the root _Model_ class.
-
-<br />
-<br />
-
----
-<!-- --------------------------------------------------------------- -->
-
-## Let's play - Generic Parameters Estimation
-
-- Define for each inherited class the methods: 
-    - `paramaterSize()`: returning the number of parameters
-    - `paramater(i)`: returning the value of the $i$th parameter
-    - `setParamater(i, aValue)`: to force the $i$th parameter
-    on a given value `aValue`.
-- Add test on `test_` scripts.
-- Move parameters estimation method from _ModelLinear_ to _Model_ class
-- Adapte those methods to be generic (on `parameter` methods rather than specific `a` and `b` parameters)
-
----
-<!-- --------------------------------------------------------------- -->
-
-## Let's play - Create a new Model
-
-<br />
-<br />
-
-### Model: MultiPoints 
-
-Compared to _ModelPlate_, the `y` coordinate is computed in a smooth way between the 2 closest plate centers for a `x` coordinate. 
-
-<br />
-<br />
-<br />
-<br />
-
-
----
-<!-- --------------------------------------------------------------- -->
-
-## Let's play - Modify the solution
-
-<br />
-
-### Square Error
-
-<br />
-
-The optimization method based on the average error is not efficient.
-Resulting estimation does not care about huge error when most of the point fit the model. 
-
-
-<br />
-<br />
+</div>
+</div>

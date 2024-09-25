@@ -37,3 +37,7 @@ Let play with another classical Data-Science problem: Classification.
 - Slides: [01-02-classification.pdf](./pdf/01-02-classification.pdf).
 
 ## Session 5 - Modular programing in Python
+
+Packaging classification solution with beautifull OOP features.
+
+- Slides: [02-01-advanced.pdf](./pdf/02-01-advanced.pdf).
