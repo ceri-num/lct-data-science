@@ -278,9 +278,9 @@ sister-modules can be imported relatively.
 For instance, in `craft.py`
 
 ```python
-import .art as art
+from . import art as art
 import .. as encyclopedia
-import ..science as science
+from .. import science as sci
 
 ...
 ```

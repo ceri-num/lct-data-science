@@ -1,5 +1,5 @@
 ---
-marp: false
+marp: true
 theme: imt
 paginate: true
 backgroundImage: url('../style/bg-imt.svg')
@@ -138,13 +138,13 @@ from a given vector separation ?
 
 ## Classifier - Generate data
 
-#### generator: A module function returning a $2\times N$ numpy.array
+#### Beautiful Cloud - a 2-Dimension data Structure
 
 <div class="line">
 <div class="one2">
 
-We wan to generate a 2-dimension
-data-set around a given position.
+We wan to generate Clouds
+around a given position.
 
 _But_ the closest to the center
 the more probable. 
@@ -161,23 +161,47 @@ With [numpy](https://numpy.org/doc/stable/reference/random/generated/numpy.rando
 
 </div>
 
-- Generate 2 data-set and plot them in 2 colors
+---
+<!-- --------------------------------------------------------------- -->
+
+## Classifier - Generate data
+
+#### Classifier: A object based on $2$ Clouds.
+
+<div class="line">
+<div class="one2">
+
+We wan to generate 2 Clouds
+around a given position.
+
+
+- Generate a 2-clouds data set <br />and plot them in 2 colors
+
+**The second cloud is always the cloud with a greater average $y$ coordinate.**
+
+</div>
+<div class="one2">
+
+![](./2-clouds.svg)
+
+</div>
 
 ---
 <!-- --------------------------------------------------------------- -->
 
+
 ## Classifier - Simple-Y
 
-<br />
-
-- Simple _y_ Classifier is composed by 1 attribute.
-    - The _y_ coordinate, modeling a horizontal separation.
-    - (class-1 is considered smaller than _y_ and class-2 greater).
-<br />
+- Simple _$y$_ Classifier is composed by $1$ attribute.
+    - The _$y$_ coordinate, modeling a horizontal separation.
+    - class-1 is considered smaller than _$y$_ and class-2 greater.
 - Classifier efficiency relies directly on the number of misclassification.
-Evaluation of a Classifier requires to confront data-set to their expected class-identifier (1 or 2).
+Evaluation of a Classifier requires to confront the data set to their predicted class by the model (1 or 2).
 <br />
-- Plot the horizontal separation and count the errors.
+- To-Do:
+  - Initialize a _$y$_ value as you want.
+  - Plot the horizontal separation.
+  - Count the errors based on a `predictClass(x, y)` method.
 
 <br />
 
@@ -190,12 +214,9 @@ Evaluation of a Classifier requires to confront data-set to their expected class
 <div class="line">
 <div class="one2">
 
-- **Optimize $y$ from
-a given 2 class data-set**
-  - Initialize bounds (_y-min_, _y-max_)
-  - Set up an expected precision _$p$_
-  - Search the optimal _y*_
-  in the range(_y-min_, _y-max_, _p_)
+- **Optimize $y$** considering 2 Clouds:
+  - Initialize with an heuristic _$y=y^0$_
+  - Search the optimal _$y^*$_ <br /> considering a delta _$d$_ <br />by moving _y_ with _$\pm d$_
 
 
 </div>
@@ -236,15 +257,17 @@ a given 2 class data-set**
 
 ## Classifier - Circle : 
 
-### `ClassifierCircle` should implement
+### `ClassifierCircle` should implement <br />the same methods as `ClassifierSimpleY`
 
 <div class="line">
 <div class="one2">
 
-  - plot()
+  - initializeParameters()
+  - predictClass(x, y)
   - countError()
-  - getParameterLimits()
+  - plot()
   - optimizeParameters( precision )
+  - ...
 
 </div>
 <div class="one2">
@@ -279,7 +302,7 @@ But maybe it is time to use inheritance <br /> to factorize parameter optimizati
 </div> 
 
 
-Inheritence: on [Wikipedia](https://en.wikipedia.org/wiki/Inheritance_(object-oriented_programming)) and [in python](https://www.w3schools.com/python/python_inheritance.asp)
+Inheritance: on [Wikipedia](https://en.wikipedia.org/wiki/Inheritance_(object-oriented_programming)) and [in python](https://www.w3schools.com/python/python_inheritance.asp)
 
 ---
 <!-- --------------------------------------------------------------- -->
@@ -289,10 +312,12 @@ Inheritence: on [Wikipedia](https://en.wikipedia.org/wiki/Inheritance_(object-or
 
 #### Transform the optimizer developed for Classifier<br />in a more generic version. 
 
-- manipulate a list of parameters with methods like _getParameters_, _setParameters_, ...  rather than directly the parameter name (_y_ in `ClassifierSimpleY`) for the optimization.
+- Manipulate a list of parameters with methods like _getParameters_, _setParameters_, ...  rather than directly the parameter name (_y_ in `ClassifierSimpleY`) for the optimization.
 - Loop on all parameters in case of Classifier with several parameters.
 - Implement the parameter methods for `ClassifierSimpleY` and `ClassifierCircle`.
-- Develope a new chlid: `ClassifierLinear`.
+- Develope a new child: `ClassifierLinear`.
+- **Apply a dichotomy-search style:**
+  Repeat the optimization process by dividing the delta $d$ by $2$ <br /> until a parameter _$\epsilon$_ value is reached.
 
 <br />
 <br />
