@@ -101,8 +101,6 @@ Vocabulary: Prompt, Command
 - _~_: the user directory - example: `cd ~/Documents`
 - **CApitAl Letters maTer** - example: `cd ~/Documents` $\neq$ `cd ~/documents`
 
-
-
 ---
 <!-- --------------------------------------------------------------- -->
 

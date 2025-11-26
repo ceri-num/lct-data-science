@@ -62,9 +62,9 @@ git clone https://$OVERLEAF_ID@git.overleaf.com/6374b3bd73dbc0e894cf0901 my_wond
 ## New on Git
 
 - **Git** is a decentralized solution for version management. Its first feature is to allow several contributors to work on a same directory, each one on its own machine.
-It permits to share an entire historic of all modifications through a common *repo* on a server, to facilitate fusion of document version (mainly by using text format), and to do it in a safe way.
+It permits to share an entire historic of all modifications through a common *repository* on a server, to facilitate fusion of document version (mainly by using text format), and to do it in a safe way.
 
-- A **GitServer**, *Bitbucket*, *GitHub*, [framagit](https://framagit.org) or private install of gitlab (*[gvipers](gvipers.imt-lille-douai.fr)* at IMT Lille Douai), propose solutions based on *git* to share a directory or repository on the cloud with management services (groups, members, access rules).
+- A **GitServer**, *Bitbucket*, *GitHub*, [framagit](https://framagit.org) or a private install of gitlab (*[gvipers](gvipers.imt-lille-douai.fr)* at IMT Nord-Europe), propose solutions based on *git* to share a directory or repository on the cloud with management services (groups, members, access rules).
 
 - **Markdown Documents** is a text format, very simple and directly interpretable on all _git_ server solutions. The format follows the philosophy: **What you see is what you get**
 
